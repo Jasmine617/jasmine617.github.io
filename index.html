@@ -103,16 +103,16 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=http://next.lisenhui.cn/post/markdown-syntax/ itemprop=url>
-Markdown语法手册
+<a class=post-title-link href=http://next.lisenhui.cn/post/setup-hugo/ itemprop=url>
+使用Hugo创建个人博客框架
 </a>
 </h1>
 <div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2019-03-11">
-2019-03-11
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-24">
+2021-11-24
 </time>
 </span>
 <span class=post-category>
@@ -120,14 +120,14 @@ Markdown语法手册
 <i class="fa fa-folder-o fa-fw"></i>
 <span class=post-meta-item-text>分类：</span>
 <span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/themes itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>themes</span>
+<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>Blog</span>
 </a>
 &nbsp;
 </span>
 <span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/syntax itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>syntax</span>
+<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>Web</span>
 </a>
 &nbsp;
 </span>
@@ -136,21 +136,81 @@ Markdown语法手册
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>763 字</span>
+<span class=leancloud-world-count>2310 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>2分钟</span>
+<span class=leancloud-view-count>5分钟</span>
 </span>
 </div>
 </header>
 <div class=post-body itemprop=articleBody>
-<p>本文提供了一个可以在 Hugo 内容文件中使用的基本Markdown语法示例，还展示了基本 HTML 元素在 Hugo 主题中是否使用 CSS 装饰。</p>
+<p>昨天跑通了如何使用GitHub Pages建了自己的第一个hello world页面，今天尝试使用Hugo来建一个完整的静态网站框架。</p>
+<p>创建静态网站，用Jekyll、Hexo、Hugo等工具都可以，看了网上大家的分析，最终决定用Hugo来做。</p>
+<p>这里先介绍如何安装Hugo、使用Hugo创建站点，并引入一个主题。按照本文操作完，站点的页面还是themes带的样例页面。我将在下一篇文章中总结如何加入自己的博文，以及修改网站的其他个人信息。</p>
 </div>
 <div class="post-more-link text-center">
-<a class=btn href=http://next.lisenhui.cn/post/markdown-syntax/ rel=contents>
+<a class=btn href=http://next.lisenhui.cn/post/setup-hugo/ rel=contents>
+阅读全文 &#187;
+</a>
+</div>
+<footer class=post-footer><div class=post-eof></div></footer>
+</article>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=http://next.lisenhui.cn/post/setup-helloworld/ itemprop=url>
+创建第一个GitHub Page
+</a>
+</h1>
+<div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>时间：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-23">
+2021-11-23
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>Blog</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>Web</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字数：</span>
+<span class=leancloud-world-count>1598 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>阅读：</span>
+<span class=leancloud-view-count>4分钟</span>
+</span>
+</div>
+</header>
+<div class=post-body itemprop=articleBody>
+<p>如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。</p>
+<p>参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。</p>
+<p>建议先花半天时间，看看<a href=https://www.liaoxuefeng.com/wiki/896043488029600>廖雪峰大神的git总结</a>和<a href=https://pages.github.com/>GitHub Pages官方文档</a>，系统了解一下git、GitHub等的关系，以及GitHub Pages的创建方法，搞清楚背景知识，实际动手会更顺利。</p>
+</div>
+<div class="post-more-link text-center">
+<a class=btn href=http://next.lisenhui.cn/post/setup-helloworld/ rel=contents>
 阅读全文 &#187;
 </a>
 </div>
@@ -198,45 +258,6 @@ Markdown语法手册
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=http://next.lisenhui.cn/post/placeholder-text/ itemprop=url>
-占位符文本显示
-</a>
-</h1>
-<div class=post-meta>
-<span class=post-time>
-<i class="fa fa-calendar-o fa-fw"></i>
-<span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2019-03-09">
-2019-03-09
-</time>
-</span>
-<span>
-|
-<i class="fa fa-file-word-o fa-fw"></i>
-<span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>300 字</span>
-</span>
-<span>
-|
-<i class="fa fa-eye fa-fw"></i>
-<span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>1分钟</span>
-</span>
-</div>
-</header>
-<div class=post-body itemprop=articleBody>
-<p>你对我的心有偏见。我向您保证，我们的生活将不会受到影响，我们的生活将会受到影响。你说你现在住在医院里，因为你的眼睛是透明的，你的眼睛是光明的，你的眼睛是光明的!</p>
-</div>
-<div class="post-more-link text-center">
-<a class=btn href=http://next.lisenhui.cn/post/placeholder-text/ rel=contents>
-阅读全文 &#187;
-</a>
-</div>
-<footer class=post-footer><div class=post-eof></div></footer>
-</article>
-<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=http://next.lisenhui.cn/post/math-typesetting/ itemprop=url>
 数据公式设置显示
 </a>
@@ -273,45 +294,6 @@ Markdown语法手册
 </div>
 <footer class=post-footer><div class=post-eof></div></footer>
 </article>
-<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=http://next.lisenhui.cn/post/emoji-support/ itemprop=url>
-支持Emoji表情符号
-</a>
-</h1>
-<div class=post-meta>
-<span class=post-time>
-<i class="fa fa-calendar-o fa-fw"></i>
-<span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2019-03-05">
-2019-03-05
-</time>
-</span>
-<span>
-|
-<i class="fa fa-file-word-o fa-fw"></i>
-<span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>143 字</span>
-</span>
-<span>
-|
-<i class="fa fa-eye fa-fw"></i>
-<span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>1分钟</span>
-</span>
-</div>
-</header>
-<div class=post-body itemprop=articleBody>
-<p>在Hugo项目中可以通过多种方式启用Emoji。</p>
-</div>
-<div class="post-more-link text-center">
-<a class=btn href=http://next.lisenhui.cn/post/emoji-support/ rel=contents>
-阅读全文 &#187;
-</a>
-</div>
-<footer class=post-footer><div class=post-eof></div></footer>
-</article>
 </section>
 <nav class=pagination>
 <span class="page-number current">1</span>
@@ -338,7 +320,7 @@ Markdown语法手册
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>5</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>日志</span>
 </a>
 </div>
@@ -350,7 +332,7 @@ Markdown语法手册
 </div>
 <div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>7</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>标签</span>
 </a>
 </div>
@@ -402,25 +384,16 @@ GitHub
 </div>
 <ul class=tagcloud-of-blogroll-list>
 <li class=tagcloud-of-blogroll-item>
-<a href=/tags/markdown>Markdown</a>
+<a href=/tags/github-pages>Github pages</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
-<a href=/tags/css>Css</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/emoji>Emoji</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/html>HTML</a>
+<a href=/tags/hugo>Hugo</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/privacy>Privacy</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/shortcodes>Shortcodes</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/text>Text</a>
 </li>
 </ul>
 </div>

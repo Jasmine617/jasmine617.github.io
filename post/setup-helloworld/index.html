@@ -4,14 +4,14 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> 占位符文本显示 - 热爱生活与梦想 </title>
+<title> 创建第一个GitHub Page - 热爱生活与梦想 </title>
 <meta name=keywords content="博客,程序员,架构师,思考,读书,笔记,技术,分享,大数据,产品">
 <meta name=author content="凡梦星尘">
-<meta property="og:title" content="占位符文本显示">
+<meta property="og:title" content="创建第一个GitHub Page">
 <meta property="og:site_name" content="热爱生活与梦想">
 <meta property="og:image" content="/img/author.jpg">
-<meta name=title content="占位符文本显示 - 热爱生活与梦想">
-<meta name=description content="Lorem Ipsum Dolor Si Amet">
+<meta name=title content="创建第一个GitHub Page - 热爱生活与梦想">
+<meta name=description content="Guide to setup hello world in GitHub Pages">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <link rel=apple-touch-icon href=/img/apple-touch-icon.png>
 <link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
@@ -36,8 +36,6 @@
 <div class=multi-lang-switch>
 <i class="fa fa-fw fa-language" style=margin-right:5px></i>
 <a class=lang-link id=zh-cn href=#>中文</a>
-<span class=lang-line> / </span>
-<a class=lang-link id=en href=http://next.lisenhui.cn/en/post/placeholder-text/>English</a>
 </div>
 <div class=custom-logo-site-title>
 <a href=/ class=brand rel=start>
@@ -103,31 +101,48 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=http://next.lisenhui.cn/post/placeholder-text/ itemprop=url>
-占位符文本显示
+<a class=post-title-link href=http://next.lisenhui.cn/post/setup-helloworld/ itemprop=url>
+创建第一个GitHub Page
 </a>
 </h1>
 <div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2019-03-09">
-2019-03-09
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-23">
+2021-11-23
 </time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>Blog</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>Web</span>
+</a>
+&nbsp;
+</span>
 </span>
 <span>
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>300 字</span>
+<span class=leancloud-world-count>1598 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>1分钟</span>
+<span class=leancloud-view-count>4分钟</span>
 </span>
-<span id=/post/placeholder-text/ class=leancloud_visitors data-flag-title=占位符文本显示>
+<span id=/post/setup-helloworld/ class=leancloud_visitors data-flag-title="创建第一个GitHub Page">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>阅读次数：</span>
@@ -136,33 +151,141 @@
 </div>
 </header>
 <div class=post-body itemprop=articleBody>
-<p>你对我的心有偏见。我向您保证，我们的生活将不会受到影响，我们的生活将会受到影响。你说你现在住在医院里，因为你的眼睛是透明的，你的眼睛是光明的，你的眼睛是光明的!</p>
+<p>如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。</p>
+<p>参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。</p>
+<p>建议先花半天时间，看看<a href=https://www.liaoxuefeng.com/wiki/896043488029600>廖雪峰大神的git总结</a>和<a href=https://pages.github.com/>GitHub Pages官方文档</a>，系统了解一下git、GitHub等的关系，以及GitHub Pages的创建方法，搞清楚背景知识，实际动手会更顺利。</p>
+<p>我的创建过程还比较顺利，基本过程记录如下：</p>
 <ol>
-<li>Exierant elisi ambit vivere dedere</li>
-<li>Duce pollice</li>
-<li>Eris modo</li>
-<li>Spargitque ferrea quos palude</li>
-</ol>
-<p>Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.</p>
+<li>
+<p>访问<a href=https://github.com/>GitHub官网</a>，注册账号并登录。</p>
+<p>注册仅需要个人邮箱。</p>
+</li>
+<li>
+<p>在Github上创建仓库。</p>
+<p><img src=//jasmine617.github.io/post/images/20211123001.png alt=单击创建仓库按钮></p>
+<p>这个仓库是计划给GitHub Pages用的，所以注意仓库名要和用户名一致；如果用户名中有大写字母，需要改为小写。</p>
+<p>例如：jasmine617.github.io</p>
+<p><img src=//jasmine617.github.io/post/images/20211123002.png alt=创建仓库></p>
+</li>
+<li>
+<p>在本机安装git。</p>
+<p>参考：<a href=https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496>廖雪峰博客-安装git</a></p>
+<p>注意：安装完git后，一定要配置用户名和邮箱，否则后续commit会报错。</p>
+<p>在Git Bash中执行如下命令，name和email请根据实际情况替换：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git config --global user.name <span style=color:#b44>&#34;Jasmine&#34;</span>
+
+$ git config --global user.email <span style=color:#b44>&#34;123456@qq.com&#34;</span>
+</code></pre></div></li>
+<li>
+<p>在本机生成SSH密钥，并配置到GitHub上。</p>
+<p>配置密钥，是为了GitHub确认本机上传文件合法；如果不配置，后续将无法将文件push到GitHub上。</p>
+<p>参考：<a href=https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416>廖雪峰博客-对接远程仓库</a></p>
 <ol>
-<li>Comas hunc haec pietate fetum procerum dixit</li>
-<li>Post torum vates letum Tiresia</li>
-<li>Flumen querellas</li>
-<li>Arcanaque montibus omnes</li>
-<li>Quidem et</li>
+<li>
+<p>检查用户主目录（Windows环境为"C:\Users\yourusername"目录下是否存在".ssh"文件夹。如果不存在，需要生成公钥文件。</p>
+<p>使用Git Bash执行，注意替换email：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ ssh-keygen -t rsa -C <span style=color:#b44>&#34;123456@qq.com&#34;</span>
+</code></pre></div></li>
+<li>
+<p>再将公钥内容配置到GitHub中。</p>
+<p><img src=//jasmine617.github.io/post/images/20211123003.png alt=创建SSH密钥></p>
+<p><img src=//jasmine617.github.io/post/images/20211123004.png alt=配置密钥></p>
+</li>
 </ol>
-<h1 id=vagus-elidunt>Vagus elidunt</h1>
-<p><svg class="canon" xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 496 373" height="373" width="496"><g fill="none"><path stroke="#000" stroke-width=".75" d="M.599 372.348 495.263 1.206M.312.633l494.95 370.853M.312 372.633 247.643.92M248.502.92l246.76 370.566M330.828 123.869V1.134M330.396 1.134 165.104 124.515"/><path stroke="#ed1c24" stroke-width=".75" d="M275.73 41.616h166.224v249.05H275.73zm-221.252.0h166.225v249.052H54.478z"/><path stroke="#000" stroke-width=".75" d="M.479.375h495v372h-495zm247.5.5v372"/><ellipse cx="498.729" cy="177.625" rx=".75" ry="1.25"/><ellipse cx="247.229" cy="377.375" rx=".75" ry="1.25"/></g></svg></p>
-<p><a href=https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon>The Van de Graaf Canon</a></p>
-<h2 id=mane-refeci-capiebant-unda-mulcebat>Mane refeci capiebant unda mulcebat</h2>
-<p>Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. <strong>Faces illo pepulere</strong> tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.</p>
-<p>Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.</p>
-<p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel <strong>mitis temploque</strong> vocatus, inque alis, <em>oculos nomen</em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides <strong>parte</strong>.</p>
+</li>
+<li>
+<p>将GitHub上的仓库克隆到本地。</p>
+<ol>
+<li>
+<p>先在GitHub上获取仓库地址：</p>
+<p><img src=//jasmine617.github.io/post/images/005%E8%8E%B7%E5%8F%96GitHub%E5%85%AC%E4%BB%93%E5%85%8B%E9%9A%86%E5%9C%B0%E5%9D%80.png alt=获取仓库URL></p>
+</li>
+<li>
+<p>在本机创建一个文件夹，用于保存从公仓获取的文件，例如"D:\myplog"。打开该目录后鼠标右键选择“Git Bash Here”，进入Git Bash窗口，执行后续命令。</p>
+<p>推荐使用SSH协议进行clone（请用从GitHub中拷贝的git仓库地址替换下例中的地址）：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git clone git@github.com:Jasmine617/jasmine617.github.io.git
+Cloning into <span style=color:#b44>&#39;jasmine617.github.io&#39;</span>...
+warning: You appear to have cloned an empty repository.
+</code></pre></div><p>因为步骤2中创建的是一个空仓库，没有任何文件，上例的系统响应中有一个warning，无需理会。
+如果使用HTTP协议，则为：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git clone https://github.com/Jasmine617/jasmine617.github.io.git
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>创建主页文件index.html，并提交到本机git库。</p>
+<ol>
+<li>
+<p>检查上一步中的"D:\myplog"文件夹，可以看到克隆成功后新增了一个文件夹"jasmine617.github.io"。</p>
+</li>
+<li>
+<p>在新增的"jasmine617.github.io"文件夹下创建一个网页文件index.html，按html语法随便写一点内容。html样例如下：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#080>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:green;font-weight:700>html</span> <span style=color:#b44>lang</span><span style=color:#666>=</span><span style=color:#b44>&#34;en&#34;</span>&gt;
+&lt;<span style=color:green;font-weight:700>head</span>&gt;
+    &lt;<span style=color:green;font-weight:700>meta</span> <span style=color:#b44>charset</span><span style=color:#666>=</span><span style=color:#b44>&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style=color:green;font-weight:700>title</span>&gt;my first blog&lt;/<span style=color:green;font-weight:700>title</span>&gt;
+&lt;/<span style=color:green;font-weight:700>head</span>&gt;
+&lt;<span style=color:green;font-weight:700>body</span>&gt;
+&lt;<span style=color:green;font-weight:700>p</span>&gt;hello world&lt;/<span style=color:green;font-weight:700>p</span>&gt;
+&lt;/<span style=color:green;font-weight:700>body</span>&gt;
+&lt;/<span style=color:green;font-weight:700>html</span>&gt;
+</code></pre></div></li>
+<li>
+<p>在Git Bash中进入git库目录。将文件提交到本机git库中。commit备注可以根据实际需要修改。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ <span style=color:#a2f>cd</span> jasmine617.github.io
+$ git add --all
+$ git commit -m <span style=color:#b44>&#34;test commit index.html&#34;</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>将index.html推送到GitHub公仓。</p>
+<ol>
+<li>
+<p>检查本机git库是否已经提交成功。下例中的系统响应代表本地git库当前的分支名是main，并且本地已经没有需要commit的文件了（即新创建的index.html已经成功提交到本机git版本库）。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git status
+On branch main
+Your branch is up to date with <span style=color:#b44>&#39;origin/main&#39;</span>.
+
+nothing to commit, working tree clean
+</code></pre></div></li>
+<li>
+<p>使用如下命令将新增的index.html提交到GitHub公仓，其中main是上个命令中查询到的本机git分支名：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git push origin main
+Enumerating objects: 3, <span style=color:#a2f;font-weight:700>done</span>.
+Counting objects: 100% <span style=color:#666>(</span>3/3<span style=color:#666>)</span>, <span style=color:#a2f;font-weight:700>done</span>.
+Delta compression using up to <span style=color:#666>8</span> threads
+Compressing objects: 100% <span style=color:#666>(</span>2/2<span style=color:#666>)</span>, <span style=color:#a2f;font-weight:700>done</span>.
+Writing objects: 100% <span style=color:#666>(</span>3/3<span style=color:#666>)</span>, <span style=color:#666>338</span> bytes | 338.00 KiB/s, <span style=color:#a2f;font-weight:700>done</span>.
+Total <span style=color:#666>3</span> <span style=color:#666>(</span>delta 0<span style=color:#666>)</span>, reused <span style=color:#666>0</span> <span style=color:#666>(</span>delta 0<span style=color:#666>)</span>, pack-reused <span style=color:#666>0</span>
+To https://github.com/Jasmine617/jasmine617.github.io.git
+ * <span style=color:#666>[</span>new branch<span style=color:#666>]</span>      main -&gt; main
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>检查GitHub Page。</p>
+<ol>
+<li>
+<p>首先在GitHub仓库中检查index.html文件是否已经存在。</p>
+<p><img src=//jasmine617.github.io/post/images/20211123006.png alt=检查上传结果 title=检查上传结果></p>
+</li>
+<li>
+<p>再检查Pages设置是否正确。本例中index.html是上传仓库根目录下的，所以这里设置为root并保存。</p>
+<p><img src=//jasmine617.github.io/post/images/20211123007.png alt=页面设置 title=页面设置></p>
+</li>
+<li>
+<p>打开GitHub Pages页面，如图显示则说明整个配置成功。</p>
+<p><img src=//jasmine617.github.io/post/images/20211123008.png alt=创建结果 title=创建结果></p>
+</li>
+</ol>
+</li>
+</ol>
 </div>
 <footer class=post-footer>
 <div class=post-tags>
-<a href=/tags/markdown rel=tag title=markdown>#markdown#</a>
-<a href=/tags/text rel=tag title=text>#text#</a>
+<a href=/tags/github-pages rel=tag title="GitHub Pages">#GitHub Pages#</a>
 </div>
 <div class=addthis_inline_share_toolbox></div>
 <div class=post-nav>
@@ -173,10 +296,10 @@
 </div>
 <div class=article-copyright-info>
 <p>
-<span>声明：</span>占位符文本显示
+<span>声明：</span>创建第一个GitHub Page
 </p>
 <p>
-<span>链接：</span>http://next.lisenhui.cn/post/placeholder-text/
+<span>链接：</span>http://next.lisenhui.cn/post/setup-helloworld/
 </p>
 <p>
 <span>作者：</span>凡梦星尘
@@ -206,13 +329,13 @@
 </div>
 <div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=http://next.lisenhui.cn/post/rich-content/ rel=next title=富文本内容测试>
-<i class="fa fa-chevron-left"></i> 富文本内容测试
+<a href=http://next.lisenhui.cn/post/setup-hugo/ rel=next title=使用Hugo创建个人博客框架>
+<i class="fa fa-chevron-left"></i> 使用Hugo创建个人博客框架
 </a>
 </div>
 <div class="post-nav-prev post-nav-item">
-<a href=http://next.lisenhui.cn/post/math-typesetting/ rel=prev title=数据公式设置显示>
-数据公式设置显示
+<a href=http://next.lisenhui.cn/post/rich-content/ rel=prev title=富文本内容测试>
+富文本内容测试
 <i class="fa fa-chevron-right"></i>
 </a>
 </div>
@@ -243,7 +366,7 @@
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>5</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>日志</span>
 </a>
 </div>
@@ -255,7 +378,7 @@
 </div>
 <div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>7</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>标签</span>
 </a>
 </div>
@@ -301,25 +424,16 @@ GitHub
 </div>
 <ul class=tagcloud-of-blogroll-list>
 <li class=tagcloud-of-blogroll-item>
-<a href=/tags/markdown>Markdown</a>
+<a href=/tags/github-pages>Github pages</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
-<a href=/tags/css>Css</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/emoji>Emoji</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/html>HTML</a>
+<a href=/tags/hugo>Hugo</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/privacy>Privacy</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/shortcodes>Shortcodes</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/text>Text</a>
 </li>
 </ul>
 </div>

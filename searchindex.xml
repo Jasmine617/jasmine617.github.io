@@ -1,37 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>Markdown语法手册</title><url>http://next.lisenhui.cn/post/markdown-syntax/</url><categories><category>themes</category><category>syntax</category></categories><tags><tag>markdown</tag><tag>css</tag><tag>html</tag></tags><content type="html"> 本文提供了一个可以在 Hugo 内容文件中使用的基本Markdown语法示例，还展示了基本 HTML 元素在 Hugo 主题中是否使用 CSS 装饰。
-标题 下面的 HTML 代码&lt;h1>—&lt;h6> 元素表示六个级别的节标题。 &lt;h1>是最高的节级别，&lt;h6>是最低的节级别。
-H1 H2 H3 H4 H5 H6 段落 Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
-伊塔图？厨房里有很多东西，我不知道他们喜欢吃什么，或者他们喜欢吃什么。
-引用 blockquote元素表示从另一个来源引用的内容，可选的引用必须在footer或cite元素内，也可选的内嵌更改，如注释和缩写。
-引用没有归属 Tiam, ad mint andaepu dandae nostion secatur sequo quae. 注意 可以在块引用中使用 Markdown 语法。
-带归属的引用 不要通过分享记忆来交流，通过交流来分享记忆。
-— 罗布·派克1
-表格 表不是Markdown核心规范的一部分，但是Hugo支持开箱即用。
-Name Age Bob 27 Alice 23 表格内使用Markdown语法 Italics Bold Code italics bold code 图像 ![图像描述](图像地址) 示例 Google Chrome Firefox Browser
-点击图像可以打开图像浏览器，快试试吧。
-代码块 带有引号的代码块 &lt;!doctype html> &lt;html lang="en"> &lt;head> &lt;meta charset="utf-8"> &lt;title>Example HTML5 Document&lt;/title> &lt;/head> &lt;body> &lt;p>Test&lt;/p> &lt;/body> &lt;/html> 用四个空格缩进的代码块 &lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="utf-8">
-&lt;title>Example HTML5 Document&lt;/title>
-&lt;/head>
-&lt;body>
-&lt;p>Test&lt;/p>
-&lt;/body>
-&lt;/html>
-代码块引用Hugo的内部高亮短代码 &lt;!doctype html> &lt;html lang="en"> &lt;head> &lt;meta charset="utf-8"> &lt;title>Example HTML5 Document&lt;/title> &lt;/head> &lt;body> &lt;p>Test&lt;/p> &lt;/body> &lt;/html> 列表类型 有序列表 First item Second item Third item 无序列表 List item Another item And another item 嵌套列表 Fruit Apple Orange Banana Dairy Milk Cheese 其他元素 — abbr, sub, sup, kbd, mark GIF 是位图图像格式。
-H2O
-Xn + Yn = Zn
-按 CTRL+ALT+Delete 组合键结束会话。
-大多数蝾螈在夜间活动，捕食昆虫、蠕虫和其他小动物。
-以上引文摘自Rob Pike在2015年11月18日Gopherfest上的演讲。&#160;&#8617;&#xfe0e;</content></entry><entry><title>富文本内容测试</title><url>http://next.lisenhui.cn/post/rich-content/</url><categories/><tags><tag>shortcodes</tag><tag>privacy</tag></tags><content type="html"> Hugo上有几个内置短代码，用于丰富内容，以及隐私配置还有一组简单的短代码，支持各种社交媒体嵌入的静态和非JS版本。
-YouTube Privacy Enhanced Shortcode Vimeo Simple Shortcode .__h_video { position: relative; padding-bottom: 56.23%; height: 0; overflow: hidden; width: 100%; background: #000; } .__h_video img { width: 100%; height: auto; color: #000; } .__h_video .play { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; cursor: pointer; }</content></entry><entry><title>占位符文本显示</title><url>http://next.lisenhui.cn/post/placeholder-text/</url><categories/><tags><tag>markdown</tag><tag>text</tag></tags><content type="html"> 你对我的心有偏见。我向您保证，我们的生活将不会受到影响，我们的生活将会受到影响。你说你现在住在医院里，因为你的眼睛是透明的，你的眼睛是光明的，你的眼睛是光明的!
-Exierant elisi ambit vivere dedere Duce pollice Eris modo Spargitque ferrea quos palude Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.
-Comas hunc haec pietate fetum procerum dixit Post torum vates letum Tiresia Flumen querellas Arcanaque montibus omnes Quidem et Vagus elidunt
-The Van de Graaf Canon
-Mane refeci capiebant unda mulcebat Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. Faces illo pepulere tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.
-Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.
-Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel mitis temploque vocatus, inque alis, oculos nomen non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides parte.</content></entry><entry><title>数据公式设置显示</title><url>http://next.lisenhui.cn/post/math-typesetting/</url><categories/><tags/><content type="html"> Hugo项目中的数学表示法可以通过使用第三方JavaScript库来实现。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>使用Hugo创建个人博客框架</title><url>http://next.lisenhui.cn/post/setup-hugo/</url><categories><category>Blog</category><category>Web</category></categories><tags><tag>GitHub Pages</tag><tag>Hugo</tag></tags><content type="html"> 昨天跑通了如何使用GitHub Pages建了自己的第一个hello world页面，今天尝试使用Hugo来建一个完整的静态网站框架。
+创建静态网站，用Jekyll、Hexo、Hugo等工具都可以，看了网上大家的分析，最终决定用Hugo来做。
+这里先介绍如何安装Hugo、使用Hugo创建站点，并引入一个主题。按照本文操作完，站点的页面还是themes带的样例页面。我将在下一篇文章中总结如何加入自己的博文，以及修改网站的其他个人信息。
+我的创建过程基本顺利，基本过程记录如下，遇到的小问题在最后单独说明：
+打开Hugo下载页面，获取与本机环境相匹配的安装包。
+例如，我下载的是：“hugo_0.89.4_Windows-64bit.zip”。
+安装Hugo。
+在本机建一个Hugo文件夹，为方便后续管理，在其下再建一个bin目录。
+例如，我建的目录是“D:\Hugo\bin”。
+将安装包拷贝到bin目录下并解压。
+解压成功后，可以在bin目录下看到“hugo.exe”。
+配置系统环境变量，为变量Path添加“hugo.exe”所在目录。
+对于我来说，添加的是“D:\Hugo\bin”。
+执行如下命令，如果能显示版本号，则说明安装成功。
+$ hugo version hugo v0.89.4-AB01BA6E windows/amd64 BuildDate=2021-11-17T08:24:09Z VendorInfo=gohugoio 建立站点。
+在Windows cmd窗口下进入Hugo文件夹。
+注意这里是“D:\Hugo”，不是“D:\Hugo\bin”。
+假设要创建的站点目录为“myblog”，则执行如下命令：
+$ hugo new site myblog Congratulations! Your new Hugo site is created in D:\Hugo\myblog. Just a few more steps and you're ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the "hugo new theme &lt;THEMENAME>" command. 2. Perhaps you want to add some content. You can add single files with "hugo new &lt;SECTIONNAME>\&lt;FILENAME>.&lt;FORMAT>". 3. Start the built-in live server via "hugo server". Visit https://gohugo.io/ for quickstart guide and full documentation. 执行完成后，可以看到“D:\Hugo”下自动创建了一个“myblog”目录，且目录下包含如下内容：
+文件夹/文件 说明 archetypes 存放default.md，头文件格式，每次新建文章默认显示的头部信息在此修改。 content 存放博客文章，markdown格式文件。 data 存放自定义或者导入的模板。 layouts 存放网站的数据模板。 static 存放图片、css、js等静态资源 themes 存放主题文件，每个主题都是一个独立的文件夹。 config.toml 网站配置文件。 下载themes。
+访问Hugo主题页面，找一个自己喜欢的主题下载到上一步创建的“themes”文件夹下，并解压。
+我这次下载的是NexT主题，它支持多设备显示自适应，同时支持评论、转发等博客需要的功能。
+下载完成后，需要按照themes的说明做一些配置。对于我下载的主题，我按照要求把hugo-theme-next目录下的两个子目录config和content到站点根目录（即“D:\Hugo\myblog”）下。
+在本地启动站点。
+在站点根目录执行如下cmd命令：
+$ hugo server Start building sites … hugo v0.89.4-AB01BA6E windows/amd64 BuildDate=2021-11-17T08:24:09Z VendorInfo=gohugoio | ZH-CN | EN -------------------+-------+----- Pages | 28 | 34 Paginator pages | 0 | 0 Non-page files | 8 | 0 Static files | 25 | 25 Processed images | 0 | 0 Aliases | 9 | 12 Sitemaps | 2 | 1 Cleaned | 0 | 0 Built in 42196 ms Watching for changes in D:\Hugo\myblog\{archetypes,content,data,layouts,static,themes} Watching for config changes in D:\Hugo\myblog\config.toml, D:\Hugo\myblog\config\_default, D:\Hugo\myblog\config\development Environment: "development" Serving pages from memory Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Press Ctrl+C to stop hugo服务启动完成时，将出现与上面相类似的响应。
+在浏览器中访问“http://localhost:1313/”，检查本地站点效果。
+在cmd窗口中按Ctrl+C，停止Hugo服务。
+发布需要提交到到GitHub的站点文件。
+将站点的BaseURL配置为GitHub Pages主页地址。
+即修改“D:\Hugo\myblog\config.toml”，将BaseURL的值修改为“https://jasmine617.github.io/”。
+发布站点。
+在站点根目录执行如下cmd命令：
+$ hugo hugo v0.89.4-AB01BA6E windows/amd64 BuildDate=2021-11-17T08:24:09Z VendorInfo=gohugoio | ZH-CN | EN -------------------+-------+----- Pages | 28 | 34 Paginator pages | 0 | 0 Non-page files | 8 | 0 Static files | 25 | 25 Processed images | 0 | 0 Aliases | 9 | 12 Sitemaps | 2 | 1 Cleaned | 0 | 0 Total in 42190 ms 发布成功，可以在“D:\Hugo\myblog\”下看到public文件夹。将这个文件夹发布到GitHub即可。
+将站点发布到GitHub。
+进入上一步创建的"D:\Hugo\myblog\public"文件夹，鼠标右键选择“Git Bash Here”，进入Git Bash窗口，执行后续命令。
+初始化git库：
+$ git init Reinitialized existing Git repository in D:/Hugo/myblog/public/.git/ 将文件提交到本机git库中。commit备注可以根据实际需要修改。
+$ git add --all $ git commit -m "first commit of Hugo site" 检查本机git库是否已经提交成功。下例中的系统响应代表本地git库当前的分支名是master，并且本地已经没有需要commit的文件了。
+$ git status On branch master Your branch is ahead of 'origin/master' by 1 commit. (use "git push" to publish your local commits) nothing to commit, working tree clean 使用如下命令，与远程GitHub公仓建立连接，并将站点提交到远程：
+请根据自己的事情，修改GitHub仓库地址和本地分支名。
+$ git remote add origin https://github.com/Jasmine617/jasmine617.github.io.git $ git push -u origin master Enumerating objects: 206, done. Counting objects: 100% (206/206), done. Delta compression using up to 8 threads Compressing objects: 100% (64/64), done. Writing objects: 100% (205/205), 194.83 KiB | 32.47 MiB/s, done. Total 205 (delta 90), reused 190 (delta 83), pack-reused 0 remote: Resolving deltas: 100% (90/90), done. To https://github.com/Jasmine617/jasmine617.github.io.git 5e8f0dc..8850953 master -> master Branch 'master' set up to track remote branch 'master' from 'origin'. 如果git操作不熟练，这里可能会出现关联远程仓库失败或者推送失败的情况。请根据错误提示，搜索解决方法。
+检查GitHub Page。
+在GitHub仓库中查看本地public目录下的文件是否都已上传。
+我在实际操作时，前一天上传的index.html在远程GitHub上创建的是main分支，今天上传的文件创建的是master分支。并且main分支是默认分支。
+而main分支实际没有用了，所以，可以先将默认分支修改为master，再删除main分支。
+检查Pages设置是否正确。
+前一天GitHub Pages的Source设置是main分支的根目录，需要检查修改为当前的master分支。
+打开GitHub Pages页面，显示内容与本地访问“http://localhost:1313/”一致，则说明整个配置成功。</content></entry><entry><title>创建第一个GitHub Page</title><url>http://next.lisenhui.cn/post/setup-helloworld/</url><categories><category>Blog</category><category>Web</category></categories><tags><tag>GitHub Pages</tag></tags><content type="html"> 如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。
+参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。
+建议先花半天时间，看看廖雪峰大神的git总结和GitHub Pages官方文档，系统了解一下git、GitHub等的关系，以及GitHub Pages的创建方法，搞清楚背景知识，实际动手会更顺利。
+我的创建过程还比较顺利，基本过程记录如下：
+访问GitHub官网，注册账号并登录。
+注册仅需要个人邮箱。
+在Github上创建仓库。
+这个仓库是计划给GitHub Pages用的，所以注意仓库名要和用户名一致；如果用户名中有大写字母，需要改为小写。
+例如：jasmine617.github.io
+在本机安装git。
+参考：廖雪峰博客-安装git
+注意：安装完git后，一定要配置用户名和邮箱，否则后续commit会报错。
+在Git Bash中执行如下命令，name和email请根据实际情况替换：
+$ git config --global user.name "Jasmine" $ git config --global user.email "123456@qq.com" 在本机生成SSH密钥，并配置到GitHub上。
+配置密钥，是为了GitHub确认本机上传文件合法；如果不配置，后续将无法将文件push到GitHub上。
+参考：廖雪峰博客-对接远程仓库
+检查用户主目录（Windows环境为"C:\Users\yourusername"目录下是否存在".ssh"文件夹。如果不存在，需要生成公钥文件。
+使用Git Bash执行，注意替换email：
+$ ssh-keygen -t rsa -C "123456@qq.com" 再将公钥内容配置到GitHub中。
+将GitHub上的仓库克隆到本地。
+先在GitHub上获取仓库地址：
+在本机创建一个文件夹，用于保存从公仓获取的文件，例如"D:\myplog"。打开该目录后鼠标右键选择“Git Bash Here”，进入Git Bash窗口，执行后续命令。
+推荐使用SSH协议进行clone（请用从GitHub中拷贝的git仓库地址替换下例中的地址）：
+$ git clone git@github.com:Jasmine617/jasmine617.github.io.git Cloning into 'jasmine617.github.io'... warning: You appear to have cloned an empty repository. 因为步骤2中创建的是一个空仓库，没有任何文件，上例的系统响应中有一个warning，无需理会。 如果使用HTTP协议，则为：
+$ git clone https://github.com/Jasmine617/jasmine617.github.io.git 创建主页文件index.html，并提交到本机git库。
+检查上一步中的"D:\myplog"文件夹，可以看到克隆成功后新增了一个文件夹"jasmine617.github.io"。
+在新增的"jasmine617.github.io"文件夹下创建一个网页文件index.html，按html语法随便写一点内容。html样例如下：
+&lt;!DOCTYPE html> &lt;html lang="en"> &lt;head> &lt;meta charset="UTF-8"> &lt;title>my first blog&lt;/title> &lt;/head> &lt;body> &lt;p>hello world&lt;/p> &lt;/body> &lt;/html> 在Git Bash中进入git库目录。将文件提交到本机git库中。commit备注可以根据实际需要修改。
+$ cd jasmine617.github.io $ git add --all $ git commit -m "test commit index.html" 将index.html推送到GitHub公仓。
+检查本机git库是否已经提交成功。下例中的系统响应代表本地git库当前的分支名是main，并且本地已经没有需要commit的文件了（即新创建的index.html已经成功提交到本机git版本库）。
+$ git status On branch main Your branch is up to date with 'origin/main'. nothing to commit, working tree clean 使用如下命令将新增的index.html提交到GitHub公仓，其中main是上个命令中查询到的本机git分支名：
+$ git push origin main Enumerating objects: 3, done. Counting objects: 100% (3/3), done. Delta compression using up to 8 threads Compressing objects: 100% (2/2), done. Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done. Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 To https://github.com/Jasmine617/jasmine617.github.io.git * [new branch] main -> main 检查GitHub Page。
+首先在GitHub仓库中检查index.html文件是否已经存在。
+再检查Pages设置是否正确。本例中index.html是上传仓库根目录下的，所以这里设置为root并保存。
+打开GitHub Pages页面，如图显示则说明整个配置成功。</content></entry><entry><title>富文本内容测试</title><url>http://next.lisenhui.cn/post/rich-content/</url><categories/><tags><tag>shortcodes</tag><tag>privacy</tag></tags><content type="html"> Hugo上有几个内置短代码，用于丰富内容，以及隐私配置还有一组简单的短代码，支持各种社交媒体嵌入的静态和非JS版本。
+YouTube Privacy Enhanced Shortcode Vimeo Simple Shortcode .__h_video { position: relative; padding-bottom: 56.23%; height: 0; overflow: hidden; width: 100%; background: #000; } .__h_video img { width: 100%; height: auto; color: #000; } .__h_video .play { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; cursor: pointer; }</content></entry><entry><title>数据公式设置显示</title><url>http://next.lisenhui.cn/post/math-typesetting/</url><categories/><tags/><content type="html"> Hugo项目中的数学表示法可以通过使用第三方JavaScript库来实现。
 在这个例子中，我们将使用 MathJax
 Create a post under /content/en[zh-CN]/math.md
 可以全局启用MathJax，请在项目配置中将参数math设置为true
@@ -77,13 +127,7 @@ $$ \frac{n!}{k!(n-k)!} = {^n}C_k {n \choose k} $$
 矩阵 $$ \begin{pmatrix} a_{11} &amp; a_{12} &amp; a_{13}\ a_{21} &amp; a_{22} &amp; a_{23}\ a_{31} &amp; a_{32} &amp; a_{33} \end{pmatrix} \begin{bmatrix} 0 &amp; \cdots &amp; 0 \ \vdots &amp; \ddots &amp; \vdots \ 0 &amp; \cdots &amp; 0 \end{bmatrix} $$
 标点符号 $$ f(x) = \sqrt{1+x} \quad (x \ge -1) f(x) \sim x^2 \quad (x\to\infty) $$
 现在用标点符号:
-$$ f(x) = \sqrt{1+x}, \quad x \ge -1 f(x) \sim x^2, \quad x\to\infty $$</content></entry><entry><title>支持Emoji表情符号</title><url>http://next.lisenhui.cn/post/emoji-support/</url><categories/><tags><tag>emoji</tag></tags><content type="html"> 在Hugo项目中可以通过多种方式启用Emoji。
-The emojify function can be called directly in templates or Inline Shortcodes.
-To enable emoji globally, set enableEmoji to true in your site&rsquo;s configuration and then you can type emoji shorthand codes directly in content files; e.g.
-馃檲 🙈 馃檳 🙉 馃檴 🙊
-The Emoji cheat sheet is a useful reference for emoji shorthand codes.
-N.B. The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.
-.emoji { font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols; }</content></entry><entry><title>关于我</title><url>http://next.lisenhui.cn/about.html</url><categories/><tags/><content type="html"> Hugo是用Go编写的一个开放源代码静态站点生成器，可在Apache许可证2.0下使用。 Hugo支持TOML, YAML和JSON数据文件类型，Markdown和HTML内容文件，并使用短代码添加丰富的内容。其他值得注意的功能包括分类法、多语言模式、图像处理、自定义输出格式、HTML/CSS/JS缩小和对Sass SCSS工作流的支持。
+$$ f(x) = \sqrt{1+x}, \quad x \ge -1 f(x) \sim x^2, \quad x\to\infty $$</content></entry><entry><title>关于我</title><url>http://next.lisenhui.cn/about.html</url><categories/><tags/><content type="html"> Hugo是用Go编写的一个开放源代码静态站点生成器，可在Apache许可证2.0下使用。 Hugo支持TOML, YAML和JSON数据文件类型，Markdown和HTML内容文件，并使用短代码添加丰富的内容。其他值得注意的功能包括分类法、多语言模式、图像处理、自定义输出格式、HTML/CSS/JS缩小和对Sass SCSS工作流的支持。
 Hugo使用了多种开源项目，包括:
 https://github.com/yuin/goldmark https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper Hugo是博客、企业网站、创意作品集、在线杂志、单页应用程序甚至是数千页的网站的理想选择。
 Hugo适合那些想要手工编写自己的网站代码，而不用担心设置复杂的运行时、依赖关系和数据库的人。
