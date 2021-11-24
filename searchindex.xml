@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>使用Hugo创建个人博客框架</title><url>http://next.lisenhui.cn/post/setup-hugo/</url><categories><category>Blog</category><category>Web</category></categories><tags><tag>GitHub Pages</tag><tag>Hugo</tag></tags><content type="html"> 昨天跑通了如何使用GitHub Pages建了自己的第一个hello world页面，今天尝试使用Hugo来建一个完整的静态网站框架。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>使用Hugo创建个人博客框架</title><url>https://jasmine617.github.io/post/setup-hugo/</url><categories><category>Blog</category><category>Web</category></categories><tags><tag>GitHub Pages</tag><tag>Hugo</tag></tags><content type="html"> 昨天跑通了如何使用GitHub Pages建了自己的第一个hello world页面，今天尝试使用Hugo来建一个完整的静态网站框架。
 创建静态网站，用Jekyll、Hexo、Hugo等工具都可以，看了网上大家的分析，最终决定用Hugo来做。
 这里先介绍如何安装Hugo、使用Hugo创建站点，并引入一个主题。按照本文操作完，站点的页面还是themes带的样例页面。我将在下一篇文章中总结如何加入自己的博文，以及修改网站的其他个人信息。
 我的创建过程基本顺利，基本过程记录如下，遇到的小问题在最后单独说明：
@@ -28,7 +28,7 @@ $ hugo server Start building sites … hugo v0.89.4-AB01BA6E windows/amd64 Build
 在cmd窗口中按Ctrl+C，停止Hugo服务。
 发布需要提交到到GitHub的站点文件。
 将站点的BaseURL配置为GitHub Pages主页地址。
-即修改“D:\Hugo\myblog\config.toml”，将BaseURL的值修改为“https://jasmine617.github.io/”。
+待修改的文件包括“D:\Hugo\myblog\config.toml”、“D:\Hugo\myblog\config\development\config.toml”和“D:\Hugo\myblog\config_default\config.toml”，将BaseURL的值修改为“https://jasmine617.github.io/”。
 发布站点。
 在站点根目录执行如下cmd命令：
 $ hugo hugo v0.89.4-AB01BA6E windows/amd64 BuildDate=2021-11-17T08:24:09Z VendorInfo=gohugoio | ZH-CN | EN -------------------+-------+----- Pages | 28 | 34 Paginator pages | 0 | 0 Non-page files | 8 | 0 Static files | 25 | 25 Processed images | 0 | 0 Aliases | 9 | 12 Sitemaps | 2 | 1 Cleaned | 0 | 0 Total in 42190 ms 发布成功，可以在“D:\Hugo\myblog\”下看到public文件夹。将这个文件夹发布到GitHub即可。
@@ -46,7 +46,7 @@ $ git remote add origin https://github.com/Jasmine617/jasmine617.github.io.git $
 而main分支实际没有用了，所以，可以先将默认分支修改为master，再删除main分支。
 检查Pages设置是否正确。
 前一天GitHub Pages的Source设置是main分支的根目录，需要检查修改为当前的master分支。
-打开GitHub Pages页面，显示内容与本地访问“http://localhost:1313/”一致，则说明整个配置成功。</content></entry><entry><title>创建第一个GitHub Page</title><url>http://next.lisenhui.cn/post/setup-helloworld/</url><categories><category>Blog</category><category>Web</category></categories><tags><tag>GitHub Pages</tag></tags><content type="html"> 如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。
+打开GitHub Pages页面，显示内容与本地访问“http://localhost:1313/”一致，则说明整个配置成功。</content></entry><entry><title>创建第一个GitHub Page</title><url>https://jasmine617.github.io/post/setup-helloworld/</url><categories><category>Blog</category><category>Web</category></categories><tags><tag>GitHub Pages</tag></tags><content type="html"> 如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。
 参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。
 建议先花半天时间，看看廖雪峰大神的git总结和GitHub Pages官方文档，系统了解一下git、GitHub等的关系，以及GitHub Pages的创建方法，搞清楚背景知识，实际动手会更顺利。
 我的创建过程还比较顺利，基本过程记录如下：
@@ -80,8 +80,8 @@ $ git status On branch main Your branch is up to date with 'origin/main'. nothin
 $ git push origin main Enumerating objects: 3, done. Counting objects: 100% (3/3), done. Delta compression using up to 8 threads Compressing objects: 100% (2/2), done. Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done. Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 To https://github.com/Jasmine617/jasmine617.github.io.git * [new branch] main -> main 检查GitHub Page。
 首先在GitHub仓库中检查index.html文件是否已经存在。
 再检查Pages设置是否正确。本例中index.html是上传仓库根目录下的，所以这里设置为root并保存。
-打开GitHub Pages页面，如图显示则说明整个配置成功。</content></entry><entry><title>富文本内容测试</title><url>http://next.lisenhui.cn/post/rich-content/</url><categories/><tags><tag>shortcodes</tag><tag>privacy</tag></tags><content type="html"> Hugo上有几个内置短代码，用于丰富内容，以及隐私配置还有一组简单的短代码，支持各种社交媒体嵌入的静态和非JS版本。
-YouTube Privacy Enhanced Shortcode Vimeo Simple Shortcode .__h_video { position: relative; padding-bottom: 56.23%; height: 0; overflow: hidden; width: 100%; background: #000; } .__h_video img { width: 100%; height: auto; color: #000; } .__h_video .play { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; cursor: pointer; }</content></entry><entry><title>数据公式设置显示</title><url>http://next.lisenhui.cn/post/math-typesetting/</url><categories/><tags/><content type="html"> Hugo项目中的数学表示法可以通过使用第三方JavaScript库来实现。
+打开GitHub Pages页面，如图显示则说明整个配置成功。</content></entry><entry><title>富文本内容测试</title><url>https://jasmine617.github.io/post/rich-content/</url><categories/><tags><tag>shortcodes</tag><tag>privacy</tag></tags><content type="html"> Hugo上有几个内置短代码，用于丰富内容，以及隐私配置还有一组简单的短代码，支持各种社交媒体嵌入的静态和非JS版本。
+YouTube Privacy Enhanced Shortcode Vimeo Simple Shortcode .__h_video { position: relative; padding-bottom: 56.23%; height: 0; overflow: hidden; width: 100%; background: #000; } .__h_video img { width: 100%; height: auto; color: #000; } .__h_video .play { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; cursor: pointer; }</content></entry><entry><title>数据公式设置显示</title><url>https://jasmine617.github.io/post/math-typesetting/</url><categories/><tags/><content type="html"> Hugo项目中的数学表示法可以通过使用第三方JavaScript库来实现。
 在这个例子中，我们将使用 MathJax
 Create a post under /content/en[zh-CN]/math.md
 可以全局启用MathJax，请在项目配置中将参数math设置为true
@@ -127,7 +127,7 @@ $$ \frac{n!}{k!(n-k)!} = {^n}C_k {n \choose k} $$
 矩阵 $$ \begin{pmatrix} a_{11} &amp; a_{12} &amp; a_{13}\ a_{21} &amp; a_{22} &amp; a_{23}\ a_{31} &amp; a_{32} &amp; a_{33} \end{pmatrix} \begin{bmatrix} 0 &amp; \cdots &amp; 0 \ \vdots &amp; \ddots &amp; \vdots \ 0 &amp; \cdots &amp; 0 \end{bmatrix} $$
 标点符号 $$ f(x) = \sqrt{1+x} \quad (x \ge -1) f(x) \sim x^2 \quad (x\to\infty) $$
 现在用标点符号:
-$$ f(x) = \sqrt{1+x}, \quad x \ge -1 f(x) \sim x^2, \quad x\to\infty $$</content></entry><entry><title>关于我</title><url>http://next.lisenhui.cn/about.html</url><categories/><tags/><content type="html"> Hugo是用Go编写的一个开放源代码静态站点生成器，可在Apache许可证2.0下使用。 Hugo支持TOML, YAML和JSON数据文件类型，Markdown和HTML内容文件，并使用短代码添加丰富的内容。其他值得注意的功能包括分类法、多语言模式、图像处理、自定义输出格式、HTML/CSS/JS缩小和对Sass SCSS工作流的支持。
+$$ f(x) = \sqrt{1+x}, \quad x \ge -1 f(x) \sim x^2, \quad x\to\infty $$</content></entry><entry><title>关于我</title><url>https://jasmine617.github.io/about.html</url><categories/><tags/><content type="html"> Hugo是用Go编写的一个开放源代码静态站点生成器，可在Apache许可证2.0下使用。 Hugo支持TOML, YAML和JSON数据文件类型，Markdown和HTML内容文件，并使用短代码添加丰富的内容。其他值得注意的功能包括分类法、多语言模式、图像处理、自定义输出格式、HTML/CSS/JS缩小和对Sass SCSS工作流的支持。
 Hugo使用了多种开源项目，包括:
 https://github.com/yuin/goldmark https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper Hugo是博客、企业网站、创意作品集、在线杂志、单页应用程序甚至是数千页的网站的理想选择。
 Hugo适合那些想要手工编写自己的网站代码，而不用担心设置复杂的运行时、依赖关系和数据库的人。
