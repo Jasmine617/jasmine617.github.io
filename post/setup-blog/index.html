@@ -1,22 +1,22 @@
 <!doctype html><html lang=zh-cn dir=content/zh-cn>
 <head>
-<meta name=generator content="Hugo 0.89.4">
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> 保持好奇心 </title>
+<title> 定制个人博客 - 保持好奇心 </title>
 <meta name=keywords content="博客,读书,笔记,技术,分享">
 <meta name=author content="Jasmine">
-<meta property="og:title" content="Home">
+<meta property="og:title" content="定制个人博客">
 <meta property="og:site_name" content="保持好奇心">
 <meta property="og:image" content="/img/author.jpg">
-<meta name=title content="Home - 保持好奇心">
-<meta name=description content="欢迎来到Jasmine的小站，这里记录我日常观察、学习到的小知识。">
+<meta name=title content="定制个人博客 - 保持好奇心">
+<meta name=description content="Guide to customize personal blog">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <link rel=apple-touch-icon href=/img/apple-touch-icon.png>
 <link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
 <link href=//cdn.bootcdn.net/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css rel=stylesheet type=text/css>
+<link href=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css rel=stylesheet>
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 </head>
@@ -36,8 +36,6 @@
 <div class=multi-lang-switch>
 <i class="fa fa-fw fa-language" style=margin-right:5px></i>
 <a class=lang-link id=zh-cn href=#>中文</a>
-<span class=lang-line> / </span>
-<a class=lang-link id=en href=https://jasmine617.github.io/en/>English</a>
 </div>
 <div class=custom-logo-site-title>
 <a href=/ class=brand rel=start>
@@ -144,138 +142,128 @@
 <span class=post-meta-item-text>阅读：</span>
 <span class=leancloud-view-count>3分钟</span>
 </span>
+<span id=/post/setup-blog/ class=leancloud_visitors data-flag-title=定制个人博客>
+|
+<i class="fa fa-binoculars fa-fw"></i>
+<span class=post-meta-item-text>阅读次数：</span>
+<span class=leancloud-visitors-count></span>
+</span>
 </div>
 </header>
 <div class=post-body itemprop=articleBody>
 <p>昨天<a href=https://jasmine617.github.io/post/setup-hugo/>使用Hugo部署的网站框架</a>里部署的还是themes带的样例页面。今天进行个性化定制，包括修改页面上的图片、链接等，并放入自己的博文。</p>
+<p>需要修改的文件主要包括：</p>
+<ul>
+<li>博文内容文件，在“D:\Hugo\myblog”下content文件夹下。</li>
+<li>网站配置文件，在“D:\Hugo\myblog”下config文件夹下。</li>
+<li>发布网站是用到的静态资源（如siderbar使用的头像图片），在主题目录下的静态资源文件夹“D:\Hugo\myblog\themes\hugo-theme-next\static”下。</li>
+<li>如果自己加入的图片和原图的命名不同，就还需要根据实际修改相关的html文件，在主题目录下的布局文件夹“D:\Hugo\myblog\themes\hugo-theme-next\layouts”下。</li>
+</ul>
+<p>本机启动Hugo server，下面的修改基本可以立即生效，方便一边修改一边验证。修改过程记录如下：</p>
+<ol>
+<li>
+<p>在“D:\Hugo\myblog\content”下放入自己写的博文。</p>
+<p>注意：中文和英文的文章是分目录存放的。例如，中文博文放在“D:\Hugo\myblog\content\zh-CN\post”下。</p>
+<p>post目录下原有的样例博文，可以直接删除，也可以通过设置draft属性为true来屏蔽。</p>
+<p>博文中用到的图，我暂时放在post目录下了，md文件中的路径写的github上的URL。</p>
+</li>
+<li>
+<p>逐一打开“D:\Hugo\myblog\config”下的配置文件，根据需要修改。</p>
+<p>我实际只修改了“config.toml”、“languages”、“params.en.toml”和“params.zh-CN.toml”。</p>
+<p>本地调试的时候，可以先改“development”子目录；调试完成需要同步修改“_default”子目录，否则Hugo发布的public站点文件还是错误的。</p>
+</li>
+<li>
+<p>在“D:\Hugo\myblog\themes\hugo-theme-next\static\img”替换自己的图片。</p>
+<p>该目录下是页面上的一些公共图片，例如siderbar的个人信息图片、博文下的QQ二维码、微信收款码等。</p>
+<p>static下还有css、js文件夹，如果不修改页面样式，无需修改。</p>
+</li>
+<li>
+<p>（可选）根据需要修改“D:\Hugo\myblog\themes\hugo-theme-next\layouts”下的页面组件html文件。</p>
+<p>主要关注“D:\Hugo\myblog\themes\hugo-theme-next\layouts\partials”下的文件，通常有两种情况需要修改：</p>
+<ul>
+<li>替换图片时，如果新文件和旧图片文件的名字不同，则将相关html中的link修改成新文件名。</li>
+<li>修改页面显示内容。例如，我没有支付宝，就屏蔽了“D:\Hugo\myblog\themes\hugo-theme-next\layouts\partials\widgets\reward.html”中的支付宝收款二维码相关代码段。</li>
+</ul>
+</li>
+<li>
+<p>将站点发布到GitHub。</p>
+<ol>
+<li>
+<p>清空public目录，再重新发布生成。</p>
+<p>在站点根目录执行如下cmd命令：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ hugo
+</code></pre></div></li>
+<li>
+<p>进入"D:\Hugo\myblog\public"文件夹，鼠标右键选择“Git Bash Here”，进入Git Bash窗口，执行后续命令。</p>
+</li>
+<li>
+<p>将文件提交到本机git库中。commit备注可以根据实际需要修改。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git add --all
+$ git commit -m <span style=color:#b44>&#34;commit my own articles&#34;</span>
+</code></pre></div></li>
+<li>
+<p>将站点提交到远程：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git push -u origin master
+</code></pre></div></li>
+</ol>
+</li>
+</ol>
 </div>
-<div class="post-more-link text-center">
-<a class=btn href=https://jasmine617.github.io/post/setup-blog/ rel=contents>
-阅读全文 &#187;
-</a>
+<footer class=post-footer>
+<div class=post-tags>
+<a href=/tags/github-pages rel=tag title="GitHub Pages">#GitHub Pages#</a>
+<a href=/tags/hugo rel=tag title=Hugo>#Hugo#</a>
 </div>
-<footer class=post-footer><div class=post-eof></div></footer>
-</article>
-<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://jasmine617.github.io/post/setup-hugo/ itemprop=url>
+<div class=addthis_inline_share_toolbox></div>
+<div class=post-nav>
+<div class=article-copyright>
+<div class=article-copyright-img>
+<img src=/img/qq_qrcode.jpg width=129px height=129px>
+<div style=text-align:center>QQ扫一扫交流</div>
+</div>
+<div class=article-copyright-info>
+<p>
+<span>声明：</span>定制个人博客
+</p>
+<p>
+<span>链接：</span>https://jasmine617.github.io/post/setup-blog/
+</p>
+<p>
+<span>作者：</span>Jasmine
+</p>
+<p>
+<span>声明： </span>本博客文章除特别声明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>许可协议，转载请注明出处！
+</p>
+</div>
+</div>
+<div class=clear></div>
+</div>
+<div class=reward-qr-info>
+<div>创作实属不易，如有帮助，那就打赏博主些许茶钱吧 ^_^</div>
+<button id=rewardButton disable=enable onclick="var qr=document.getElementById('QR');qr.style.display==='none'?qr.style.display='block':qr.style.display='none'">
+<span>赏</span>
+</button>
+<div id=QR style=display:none>
+<div id=wechat style=display:inline-block>
+<img id=wechat_qr src=/img/wechat-pay.png alt="WeChat Pay">
+<p>微信打赏</p>
+</div>
+</div>
+</div>
+<div class=post-nav>
+<div class="post-nav-next post-nav-item">
+</div>
+<div class="post-nav-prev post-nav-item">
+<a href=https://jasmine617.github.io/post/setup-hugo/ rel=prev title=使用Hugo创建个人博客框架>
 使用Hugo创建个人博客框架
-</a>
-</h1>
-<div class=post-meta>
-<span class=post-time>
-<i class="fa fa-calendar-o fa-fw"></i>
-<span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-24">
-2021-11-24
-</time>
-</span>
-<span class=post-category>
-&nbsp; | &nbsp;
-<i class="fa fa-folder-o fa-fw"></i>
-<span class=post-meta-item-text>分类：</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Blog</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Web</span>
-</a>
-&nbsp;
-</span>
-</span>
-<span>
-|
-<i class="fa fa-file-word-o fa-fw"></i>
-<span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>2407 字</span>
-</span>
-<span>
-|
-<i class="fa fa-eye fa-fw"></i>
-<span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>5分钟</span>
-</span>
-</div>
-</header>
-<div class=post-body itemprop=articleBody>
-<p>昨天跑通了如何<a href=https://jasmine617.github.io/post/setup-helloworld/>使用GitHub Pages建了自己的第一个hello world页面</a>，今天尝试使用Hugo来建一个完整的静态网站框架。</p>
-<p>创建静态网站，用Jekyll、Hexo、Hugo等工具都可以，看了网上大家的分析，最终决定用Hugo来做。</p>
-<p>这里先介绍如何安装Hugo、使用Hugo创建站点，并引入一个主题。按照本文操作完，站点的页面还是themes带的样例页面。我将在下一篇文章中总结如何加入自己的博文，以及修改网站的其他个人信息。</p>
-</div>
-<div class="post-more-link text-center">
-<a class=btn href=https://jasmine617.github.io/post/setup-hugo/ rel=contents>
-阅读全文 &#187;
+<i class="fa fa-chevron-right"></i>
 </a>
 </div>
-<footer class=post-footer><div class=post-eof></div></footer>
-</article>
-<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://jasmine617.github.io/post/setup-helloworld/ itemprop=url>
-创建第一个GitHub Page
-</a>
-</h1>
-<div class=post-meta>
-<span class=post-time>
-<i class="fa fa-calendar-o fa-fw"></i>
-<span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-23">
-2021-11-23
-</time>
-</span>
-<span class=post-category>
-&nbsp; | &nbsp;
-<i class="fa fa-folder-o fa-fw"></i>
-<span class=post-meta-item-text>分类：</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Blog</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Web</span>
-</a>
-&nbsp;
-</span>
-</span>
-<span>
-|
-<i class="fa fa-file-word-o fa-fw"></i>
-<span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>1598 字</span>
-</span>
-<span>
-|
-<i class="fa fa-eye fa-fw"></i>
-<span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>4分钟</span>
-</span>
 </div>
-</header>
-<div class=post-body itemprop=articleBody>
-<p>如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。</p>
-<p>参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。</p>
-<p>建议先花半天时间，看看<a href=https://www.liaoxuefeng.com/wiki/896043488029600>廖雪峰大神的git总结</a>和<a href=https://pages.github.com/>GitHub Pages官方文档</a>，系统了解一下git、GitHub等的关系，以及GitHub Pages的创建方法，搞清楚背景知识，实际动手会更顺利。</p>
-</div>
-<div class="post-more-link text-center">
-<a class=btn href=https://jasmine617.github.io/post/setup-helloworld/ rel=contents>
-阅读全文 &#187;
-</a>
-</div>
-<footer class=post-footer><div class=post-eof></div></footer>
+<div id=wcomments></div>
+</footer>
 </article>
 </section>
-<nav class=pagination>
-<span class="page-number current">1</span>
-</nav>
 </div>
 </div>
 <div class=sidebar-toggle>
@@ -315,12 +303,6 @@
 </a>
 </div>
 </nav>
-<div class="feed-link motion-element">
-<a href=/index.xml rel=alternate type=application/rss+xml target=_blank>
-<i class="fa fa-rss"></i>
-RSS 订阅
-</a>
-</div>
 <div class="links-of-author motion-element">
 <span class=links-of-author-item>
 <a href=https://github.com/Jasmine617/ target=_blank title=GitHub>
@@ -389,6 +371,10 @@ CSDN
 <script type=text/javascript src=/js/affix.js></script>
 <script type=text/javascript src=/js/scrollspy.js></script>
 <script type=text/javascript>function detectIE(){var a=window.navigator.userAgent,b=a.indexOf('MSIE '),c=a.indexOf('Trident/'),d=a.indexOf('Edge/');return b>0||c>0||d>0?-1:1}function getCntViewHeight(){var b=$('#content').height(),a=$(window).height(),c=b>a?b-a:$(document).height()-a;return c}function getScrollbarWidth(){var a=$('<div />').addClass('scrollbar-measure').prependTo('body'),b=a[0],c=b.offsetWidth-b.clientWidth;return a.remove(),c}function registerBackTop(){var b=50,a=$('.back-to-top');$(window).on('scroll',function(){var d,e,f,c,g;a.toggleClass('back-to-top-on',window.pageYOffset>b),d=$(window).scrollTop(),e=getCntViewHeight(),f=d/e,c=Math.round(f*100),g=c>100?100:c,$('#scrollpercent>span').html(g)}),a.on('click',function(){$("html,body").animate({scrollTop:0,screenLeft:0},800)})}function initScrollSpy(){var a='.post-toc',d=$(a),b='.active-current';d.on('activate.bs.scrollspy',function(){var b=$(a+' .active').last();c(),b.addClass('active-current')}).on('clear.bs.scrollspy',c),$('body').scrollspy({target:a});function c(){$(a+' '+b).removeClass(b.substring(1))}}function initAffix(){var a=$('.header-inner').height(),b=parseInt($('.main').css('padding-bottom'),10),c=a+10;$('.sidebar-inner').affix({offset:{top:c,bottom:b}}),$(document).on('affixed.bs.affix',function(){updateTOCHeight(document.body.clientHeight-100)})}function initTOCDimension(){var a,b;$(window).on('resize',function(){a&&clearTimeout(a),a=setTimeout(function(){var a=document.body.clientHeight-100;updateTOCHeight(a)},0)}),updateTOCHeight(document.body.clientHeight-100),b=getScrollbarWidth(),$('.post-toc').css('width','calc(100% + '+b+'px)')}function updateTOCHeight(a){a=a||'auto',$('.post-toc').css('max-height',a)}$(function(){var b=$('.header-inner').height()+10,c,d,a,e;$('#sidebar').css({'margin-top':b}).show(),c=parseInt($('#sidebar').css('margin-top')),d=parseInt($('.sidebar-inner').css('height')),a=c+d,e=$('.content-wrap').height(),e<a&&$('.content-wrap').css('min-height',a),$('.site-nav-toggle').on('click',function(){var a=$('.site-nav'),e=$('.toggle'),b='site-nav-on',f='toggle-close',c=a.hasClass(b),g=c?'slideUp':'slideDown',d=c?'removeClass':'addClass';a.stop()[g]('normal',function(){a[d](b),e[d](f)})}),registerBackTop(),initScrollSpy(),initAffix(),initTOCDimension(),$('.sidebar-nav-toc').click(function(){$(this).addClass('sidebar-nav-active'),$(this).next().removeClass('sidebar-nav-active'),$('.'+$(this).next().attr('data-target')).toggle(500),$('.'+$(this).attr('data-target')).toggle(500)}),$('.sidebar-nav-overview').click(function(){$(this).addClass('sidebar-nav-active'),$(this).prev().removeClass('sidebar-nav-active'),$('.'+$(this).prev().attr('data-target')).toggle(500),$('.'+$(this).attr('data-target')).toggle(500)})})</script>
+<script src=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js></script>
+<script type=text/javascript>$(function(){$('.post-body').viewer()})</script>
+<script type=text/javascript>$(function(){detectIE()>0?$.getScript(document.location.protocol+'//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',function(){new Waline({el:'#wcomments',visitor:!0,avatar:'wavatar',avatarCDN:'https://sdn.geekzu.org/avatar/',avatarForce:!1,wordLimit:'200',placeholder:' 欢迎留下您的宝贵建议，请填写您的昵称和邮箱便于后续交流. ^_^ ',requiredFields:['nick','mail'],serverURL:"Your WalineSerURL",lang:"zh-cn"})}):$('#wcomments').html('抱歉，Waline插件不支持IE或Edge，建议使用Chrome浏览器。')})</script>
+<script type=text/javascript src="//s7.addthis.com/js/300/addthis_widget.js#pubid=Your%20AddthisId"></script>
 <script>(function(){var a=document.createElement('script'),c=window.location.protocol.split(':')[0],b;c==='https'?a.src='https://zz.bdstatic.com/linksubmit/push.js':a.src='http://push.zhanzhang.baidu.com/push.js',b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
 </body>
 </html>
