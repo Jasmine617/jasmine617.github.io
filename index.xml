@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on 保持好奇心</title><link>https://jasmine617.github.io/</link><description>Recent content in Home on 保持好奇心</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 25 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jasmine617.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>定制个人博客</title><link>https://jasmine617.github.io/post/setup-blog/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://jasmine617.github.io/post/setup-blog/</guid><description>&lt;p>昨天&lt;a href="https://jasmine617.github.io/post/setup-hugo/">使用Hugo部署的网站框架&lt;/a>里部署的还是themes带的样例页面。今天进行个性化定制，包括修改页面上的图片、链接等，并放入自己的博文。&lt;/p></description></item><item><title>使用Hugo创建个人博客框架</title><link>https://jasmine617.github.io/post/setup-hugo/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://jasmine617.github.io/post/setup-hugo/</guid><description>&lt;p>昨天跑通了如何&lt;a href="https://jasmine617.github.io/post/setup-helloworld/">使用GitHub Pages建了自己的第一个hello world页面&lt;/a>，今天尝试使用Hugo来建一个完整的静态网站框架。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on 保持好奇心</title><link>https://jasmine617.github.io/</link><description>Recent content in Home on 保持好奇心</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jasmine617.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python中list、tuple、dict和set的对比小结</title><link>https://jasmine617.github.io/post/python-list/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://jasmine617.github.io/post/python-list/</guid><description>&lt;p>对Python中list、turple、dict和set这四种数据类型进行对比总结。&lt;/p>
+&lt;h2 id="概览">概览&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>列表list&lt;/th>
+&lt;th>元组tuple&lt;/th>
+&lt;th>字典dict&lt;/th>
+&lt;th>集合set&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>读写要求&lt;/td>
+&lt;td>读写&lt;/td>
+&lt;td>只读&lt;/td>
+&lt;td>只读&lt;/td>
+&lt;td>读写&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>读取方式&lt;/td>
+&lt;td>索引&lt;/td>
+&lt;td>索引&lt;/td>
+&lt;td>键key&lt;/td>
+&lt;td>只能遍历&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>值是否重复&lt;/td>
+&lt;td>是&lt;/td>
+&lt;td>是&lt;/td>
+&lt;td>键不能重复，值可以&lt;/td>
+&lt;td>否&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>数据存储&lt;/td>
+&lt;td>连续、静态&lt;/td>
+&lt;td>连续、静态&lt;/td>
+&lt;td>不连续、动态&lt;/td>
+&lt;td>不连续、动态&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>是否有序&lt;/td>
+&lt;td>是&lt;/td>
+&lt;td>是&lt;/td>
+&lt;td>否（自动正序）&lt;/td>
+&lt;td>否&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>初始化&lt;/td>
+&lt;td>[lvalue1, lvalue2]&lt;/td>
+&lt;td>(tvalue1, tvalue2)&lt;/td>
+&lt;td>{key1:value1, key2:value2}&lt;/td>
+&lt;td>{svalue1, svalue2}&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>增&lt;/td>
+&lt;td>list.append(value)&lt;/td>
+&lt;td>只读&lt;/td>
+&lt;td>dict[key1] = value1&lt;/td>
+&lt;td>set.add(value1)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>删&lt;/td>
+&lt;td>del list[2]&lt;/td>
+&lt;td>只读&lt;/td>
+&lt;td>del dict[key]&lt;/td>
+&lt;td>set.remove(value1)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>改&lt;/td>
+&lt;td>list[2]=newValue&lt;/td>
+&lt;td>只读&lt;/td>
+&lt;td>dict[key1] = newValue&lt;/td>
+&lt;td>set.update(value)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>查&lt;/td>
+&lt;td>list[2:]&lt;/td>
+&lt;td>tuple[1:5]&lt;/td>
+&lt;td>dict[key]&lt;/td>
+&lt;td>value in set&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>应用场景&lt;/td>
+&lt;td>非结构化数据存储&lt;/td>
+&lt;td>稳定的数据存储&lt;/td>
+&lt;td>结构化数据存储&lt;/td>
+&lt;td>数据剔重&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>定制个人博客</title><link>https://jasmine617.github.io/post/setup-blog/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://jasmine617.github.io/post/setup-blog/</guid><description>&lt;p>昨天&lt;a href="https://jasmine617.github.io/post/setup-hugo/">使用Hugo部署的网站框架&lt;/a>里部署的还是themes带的样例页面。今天进行个性化定制，包括修改页面上的图片、链接等，并放入自己的博文。&lt;/p></description></item><item><title>使用Hugo创建个人博客框架</title><link>https://jasmine617.github.io/post/setup-hugo/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://jasmine617.github.io/post/setup-hugo/</guid><description>&lt;p>昨天跑通了如何&lt;a href="https://jasmine617.github.io/post/setup-helloworld/">使用GitHub Pages建了自己的第一个hello world页面&lt;/a>，今天尝试使用Hugo来建一个完整的静态网站框架。&lt;/p>
 &lt;p>创建静态网站，用Jekyll、Hexo、Hugo等工具都可以，看了网上大家的分析，最终决定用Hugo来做。&lt;/p>
 &lt;p>这里先介绍如何安装Hugo、使用Hugo创建站点，并引入一个主题。按照本文操作完，站点的页面还是themes带的样例页面。我将在下一篇文章中总结如何加入自己的博文，以及修改网站的其他个人信息。&lt;/p></description></item><item><title>创建第一个GitHub Page</title><link>https://jasmine617.github.io/post/setup-helloworld/</link><pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate><guid>https://jasmine617.github.io/post/setup-helloworld/</guid><description>&lt;p>如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。&lt;/p>
 &lt;p>参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。&lt;/p>

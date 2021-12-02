@@ -103,6 +103,147 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://jasmine617.github.io/post/python-list/ itemprop=url>
+Python中list、tuple、dict和set的对比小结
+</a>
+</h1>
+<div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>时间：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-30">
+2021-11-30
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/cs itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>CS</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字数：</span>
+<span class=leancloud-world-count>4451 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>阅读：</span>
+<span class=leancloud-view-count>9分钟</span>
+</span>
+</div>
+</header>
+<div class=post-body itemprop=articleBody>
+<p>对Python中list、turple、dict和set这四种数据类型进行对比总结。</p>
+<h2 id=概览>概览</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>列表list</th>
+<th>元组tuple</th>
+<th>字典dict</th>
+<th>集合set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读写要求</td>
+<td>读写</td>
+<td>只读</td>
+<td>只读</td>
+<td>读写</td>
+</tr>
+<tr>
+<td>读取方式</td>
+<td>索引</td>
+<td>索引</td>
+<td>键key</td>
+<td>只能遍历</td>
+</tr>
+<tr>
+<td>值是否重复</td>
+<td>是</td>
+<td>是</td>
+<td>键不能重复，值可以</td>
+<td>否</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>连续、静态</td>
+<td>连续、静态</td>
+<td>不连续、动态</td>
+<td>不连续、动态</td>
+</tr>
+<tr>
+<td>是否有序</td>
+<td>是</td>
+<td>是</td>
+<td>否（自动正序）</td>
+<td>否</td>
+</tr>
+<tr>
+<td>初始化</td>
+<td>[lvalue1, lvalue2]</td>
+<td>(tvalue1, tvalue2)</td>
+<td>{key1:value1, key2:value2}</td>
+<td>{svalue1, svalue2}</td>
+</tr>
+<tr>
+<td>增</td>
+<td>list.append(value)</td>
+<td>只读</td>
+<td>dict[key1] = value1</td>
+<td>set.add(value1)</td>
+</tr>
+<tr>
+<td>删</td>
+<td>del list[2]</td>
+<td>只读</td>
+<td>del dict[key]</td>
+<td>set.remove(value1)</td>
+</tr>
+<tr>
+<td>改</td>
+<td>list[2]=newValue</td>
+<td>只读</td>
+<td>dict[key1] = newValue</td>
+<td>set.update(value)</td>
+</tr>
+<tr>
+<td>查</td>
+<td>list[2:]</td>
+<td>tuple[1:5]</td>
+<td>dict[key]</td>
+<td>value in set</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>非结构化数据存储</td>
+<td>稳定的数据存储</td>
+<td>结构化数据存储</td>
+<td>数据剔重</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="post-more-link text-center">
+<a class=btn href=https://jasmine617.github.io/post/python-list/ rel=contents>
+阅读全文 &#187;
+</a>
+</div>
+<footer class=post-footer><div class=post-eof></div></footer>
+</article>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://jasmine617.github.io/post/setup-blog/ itemprop=url>
 定制个人博客
 </a>
@@ -120,14 +261,8 @@
 <i class="fa fa-folder-o fa-fw"></i>
 <span class=post-meta-item-text>分类：</span>
 <span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Blog</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Web</span>
+<a href=/categories/cs itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>CS</span>
 </a>
 &nbsp;
 </span>
@@ -176,14 +311,8 @@
 <i class="fa fa-folder-o fa-fw"></i>
 <span class=post-meta-item-text>分类：</span>
 <span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Blog</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Web</span>
+<a href=/categories/cs itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>CS</span>
 </a>
 &nbsp;
 </span>
@@ -234,14 +363,8 @@
 <i class="fa fa-folder-o fa-fw"></i>
 <span class=post-meta-item-text>分类：</span>
 <span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/blog itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Blog</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/web itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>Web</span>
+<a href=/categories/cs itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>CS</span>
 </a>
 &nbsp;
 </span>
@@ -298,19 +421,19 @@
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>3</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>日志</span>
 </a>
 </div>
 <div class="site-state-item site-state-categories">
 <a href=/categories/>
-<span class=site-state-item-count>2</span>
+<span class=site-state-item-count>1</span>
 <span class=site-state-item-name>分类</span>
 </a>
 </div>
 <div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>2</span>
+<span class=site-state-item-count>3</span>
 <span class=site-state-item-name>标签</span>
 </a>
 </div>
@@ -360,6 +483,9 @@ CSDN
 </li>
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/hugo>Hugo</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/python>Python</a>
 </li>
 </ul>
 </div>
