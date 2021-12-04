@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>Python中list、tuple、dict和set的对比小结</title><url>https://jasmine617.github.io/post/python-list/</url><categories><category>CS</category></categories><tags><tag>Python</tag></tags><content type="html"> 对Python中list、turple、dict和set这四种数据类型进行对比总结。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>Python中print小结</title><url>https://jasmine617.github.io/post/python-print/</url><categories><category>CS</category></categories><tags><tag>Python</tag></tags><content type="html"> 对Python中print函数的使用进行总结。包括：
+print方法的基本语法格式。 使用多种方式进行打印格式化。 print语法格式 print()函数具有丰富的功能，详细语法格式如下：
+print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False) 除了待打印输出的value，其他可选关键字参数如下：
+file：类文件对象（stream），默认为当前的sys.stdout，即打印到屏幕上。如果指定一个文件，则打印输出到文件中。 sep：打印多个value时，在值之间插入的分隔字符串，默认为空格。 end：在最后一个值后附加的字符串，默认为换行符。 flush：控制输出缓存，一般为了可以获得较好的性能，保持为False即可。 样例代码：
+# 在屏幕上打印一个字符串 print('hello world') # 打印输出到文件中 fp=open('D:/PycharmProjects/testfile.txt', 'a+') print('hello world', file=fp) fp.close() #打印多个字符串，用逗号分隔 print('hello world', 'python') #打印多个字符串，并设置参数间的分隔符 print('hello world', 'python', sep='|') # 使用加号，打印一个计算公式计算结果 print(3+1) # 使用加号，连接打印多个字符串 print('hello world'+'python') # 打印后不换行，设置和下一次打印间的分隔符 print('春风得意马蹄疾', end=' ') print('一夜看尽长安花') print('行到水穷处', end='\t') print('坐看云起时') print('--------------------------------------') # 待打印字符串中包含转义符 print('hello\tworld') print('hello\nworld') print('\'aaa\'') # 待打印字符串中包含字体颜色设置 print('\033[0:31:47m试试颜色\033[0m') print('\033[4;31m试试颜色\033[0m') print('--------------------------------------') 测试结果：
+hello world hello world python hello world|python 4 hello worldpython 春风得意马蹄疾 一夜看尽长安花 行到水穷处 坐看云起时 -------------------------------------- hello world hello world 'aaa' 使用%进行数据格式化 print() 函数使用以%开头的转换说明符，对各种类型的数据进行格式化输出。
+符号 描述 %c 格式化字符及其ASCII码 %s 格式化字符串 %d 格式化整数 %u 格式化无符号整型 %o 格式化无符号八进制数 %x 格式化无符号十六进制数 %X 格式化无符号十六进制数（大写） %f 格式化浮点数字，可指定小数点后的精度 %e 用科学计数法格式化浮点数 %E 作用同%e，用科学计数法格式化浮点数 %g %f和%e的简写 %G %f 和 %E 的简写 %p 用十六进制数格式化变量的地址 在使用上述转换说明符时，还可以添加辅助指令：
+符号 功能 * 定义宽度或者小数点精度 - 用做左对齐 + 在正数前面显示加号( + ) 在正数前面显示空格 # 在八进制数前面显示零(&lsquo;0&rsquo;)，在十六进制前面显示'0x&rsquo;或者'0X' 0 显示的数字前面填充'0&rsquo;而不是默认的空格 % &lsquo;%%&lsquo;输出一个单一的&rsquo;%&rsquo; m.n m 是显示的最小总宽度,n 是小数点后的位数 样例代码（格式化整数）：
+# 格式化整数 num = 9855 print('这里有一个整数：%d'%num) #未定义数字宽度，按实际位数显示 print('这里有一个整数：%8d'%num) #定义数据宽度为8，不足的在左侧留空格 print('这里有一个整数：%08d'%num) #定义数据宽度为8，不足的在左侧用0补齐 print('这里有一个整数：%-08d'%num) #左对齐，数字后空格补齐8位 print('这里有一个整数：%03d'%num) #实际位数大于3，则按实际显示 print('这里有一个整数：%0*d'%(6,num)) #用*从后面的元组中获取宽度 print('这里有一个整数：%+08d'%num) #显示正负号 print('--------------------------------------') 测试结果：
+这里有一个整数：9855 这里有一个整数： 9855 这里有一个整数：00009855 这里有一个整数：9855 这里有一个整数：9855 这里有一个整数：009855 这里有一个整数：+0009855 样例代码（转换整数的进制）：
+# 显示整数的其他进制 print('它的八进制是：%o'%num) #显示八进制格式 print('它的八进制是：%#o'%num) #在八进制前显示0o print('它的十六进制是：%x'%num) #显示小写十六进制 print('它的十六进制是：%#X'%num) #显示大写十六进展，并在前面表示0X print('-------------') # 未使用格式化时，还可以使用函数进行进制转换 print('它的二进制是：',bin(num)) print('它的八进制是：',oct(num)) print('它的十六进制是：',hex(num)) print('--------------------------------------') 测试结果：
+它的八进制是：23177 它的八进制是：0o23177 它的十六进制是：267f 它的十六进制是：0X267F ------------- 它的二进制是： 0b10011001111111 它的八进制是： 0o23177 它的十六进制是： 0x267f 样例代码（格式化浮点数）：
+# 格式化浮点数 pi = 3.141592653 print('这是一个浮点数：%10.3f' % pi) #数字宽度为10，精度3 print("这是一个浮点数：%*.*f" % (8,3,pi)) #用*从后面的元组中读取字段宽度和精度 print("这是一个浮点数：%.*f" % (3,pi)) #用*从后面的元组中读取字段精度 print('这是一个浮点数：%010.3f' % pi) #用0填充空白 print('这是一个浮点数：%-10.3f' % pi) #左对齐，数字后面有5个占位的空格 print('这是一个浮点数：%+f' % pi) #显示正负号 测试结果：
+这是一个浮点数： 3.142 这是一个浮点数： 3.142 这是一个浮点数：3.142 这是一个浮点数：000003.142 这是一个浮点数：3.142 这是一个浮点数：+3.141593 样例代码（格式化字符串）：
+# 格式化字符串 name = "Jasmine" print('My name is：%s'%name) print('My name is：%10s'%name) 测试结果：
+My name is：Jasmine My name is： Jasmine 使用format函数进行格式化 相对基本格式化输出采用‘%’的方法，format()功能更强大。
+格式为：
+print('{&lt;参数序号>:&lt;格式控制标记>}xxxxx{}xxxxxxxxx{}'.format(参数1, 参数2, 参数3)) 上述示例中：
+xxxxx为静态内容，print直接输出。 每对{}对应一个参数，print输出时，将被format后定义的参数的值替换。 每对{}可以定义序号（例如{0}、{1}），也可以不定义。不定义时默认依次定义为{0}，{1}。 每对{}内可以定义辅助指令，辅助指令放置在:后，其格式为&lt;填充>&lt;对齐>&lt;宽度>&lt;,>&lt;.精度>&lt;类型> &lt;填充>：当输出宽度大于参数宽度时，显示的填充符号。如果不设置，则默认用空格填充。 &lt;对齐>：&lt;左对齐，>右对齐，^居中。默认为右对齐。 &lt;宽度>：参数输出时的总占位宽度。 &lt;,>：对于整数和浮点数，是否显示千位分隔符。 &lt;.精度>：浮点数的小数点后位数。 &lt;类型>：c、s、d、f等，对应输出参数的数据类型。 样例代码：
+# 使用format格式化 name = '小明' age = 12 height = 1.5678 print('他是{}，今年{}岁，身高是{}米。'.format(name, age, height)) #{}中未定义参数序号，直接依次与format中的参数匹配 print('他是{0}，今年{2}岁，身高是{1}米。'.format(name, height, age)) #{}中标识参数序号，即为format中的参数顺序 print('他是{:^6}，今年{:04}岁，身高是{:.2f}米。'.format(name, age, height)) #name占10位并居中显示，age占4位空位用0填充，height保留2位小数 print('--------------------------------------') 测试结果：
+他是小明，今年12岁，身高是1.5678米。 他是小明，今年12岁，身高是1.5678米。 他是 小明 ，今年0012岁，身高是1.57米。 使用f进行格式化 在print中使用f，则在打印输出时，会直接返回{}中定义的表达式结果。相比前面两种格式化方式，这种写法代码最简洁。
+格式为：
+print(f'xxxx{&lt;参数名>:&lt;格式控制标记>}xxxxx{参数名}xxxxxxxxx{参数名}') 上述示例中：
+xxxxx为静态内容，print直接输出。 每对{}对应一个参数，需要定义参数名；print输出时，将显示为该参数的值。 每对{}内可以定义辅助指令，辅助指令放置在:后，其格式为&lt;填充>&lt;对齐>&lt;宽度>&lt;,>&lt;.精度>&lt;类型>，具体规则和format方法一致。 样例代码：
+# 使用f格式化 print(f'他是{name}，今年{age}岁，身高是{height}米。') #{}中定义参数名 print(f'他是{name:^6}，今年{age:04}岁，身高是{height:.2f}米。') print('--------------------------------------') 测试结果：
+他是小明，今年12岁，身高是1.5678米。 他是 小明 ，今年0012岁，身高是1.57米。</content></entry><entry><title>Python中list、tuple、dict和set的对比小结</title><url>https://jasmine617.github.io/post/python-list/</url><categories><category>CS</category></categories><tags><tag>Python</tag></tags><content type="html"> 对Python中list、turple、dict和set这四种数据类型进行对比总结。
 概览 列表list 元组tuple 字典dict 集合set 读写要求 读写 只读 只读 读写 读取方式 索引 索引 键key 只能遍历 值是否重复 是 是 键不能重复，值可以 否 数据存储 连续、静态 连续、静态 不连续、动态 不连续、动态 是否有序 是 是 否（自动正序） 否 初始化 [lvalue1, lvalue2] (tvalue1, tvalue2) {key1:value1, key2:value2} {svalue1, svalue2} 增 list.append(value) 只读 dict[key1] = value1 set.add(value1) 删 del list[2] 只读 del dict[key] set.remove(value1) 改 list[2]=newValue 只读 dict[key1] = newValue set.update(value) 查 list[2:] tuple[1:5] dict[key] value in set 应用场景 非结构化数据存储 稳定的数据存储 结构化数据存储 数据剔重 列表 列表是一组有序存储的数据，它的特性包括：
 用中括号将元素括起来，元素之间有逗号隔开。
 列表可存储任意类型的数据，列表中各元素的类型可以不同，列表中各元素的值可以重复。
