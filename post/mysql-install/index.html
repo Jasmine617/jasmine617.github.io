@@ -4,14 +4,14 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> 定制个人博客 - 保持好奇心 </title>
+<title> Win 10环境下安装MySQL 5.7 - 保持好奇心 </title>
 <meta name=keywords content="博客,读书,笔记,技术,分享">
 <meta name=author content="Jasmine">
-<meta property="og:title" content="定制个人博客">
+<meta property="og:title" content="Win 10环境下安装MySQL 5.7">
 <meta property="og:site_name" content="保持好奇心">
 <meta property="og:image" content="/img/author.jpg">
-<meta name=title content="定制个人博客 - 保持好奇心">
-<meta name=description content="Guide to customize personal blog">
+<meta name=title content="Win 10环境下安装MySQL 5.7 - 保持好奇心">
+<meta name=description content="Installation of MySQL 5.7 in Win 10">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <link rel=apple-touch-icon href=/img/apple-touch-icon.png>
 <link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
@@ -101,16 +101,16 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://jasmine617.github.io/post/setup-blog/ itemprop=url>
-定制个人博客
+<a class=post-title-link href=https://jasmine617.github.io/post/mysql-install/ itemprop=url>
+Win 10环境下安装MySQL 5.7
 </a>
 </h1>
 <div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-25">
-2021-11-25
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-30">
+2022-03-30
 </time>
 </span>
 <span class=post-category>
@@ -128,7 +128,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>1408 字</span>
+<span class=leancloud-world-count>1305 字</span>
 </span>
 <span>
 |
@@ -136,7 +136,7 @@
 <span class=post-meta-item-text>阅读：</span>
 <span class=leancloud-view-count>3分钟</span>
 </span>
-<span id=/post/setup-blog/ class=leancloud_visitors data-flag-title=定制个人博客>
+<span id=/post/mysql-install/ class=leancloud_visitors data-flag-title="Win 10环境下安装MySQL 5.7">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>阅读次数：</span>
@@ -145,68 +145,116 @@
 </div>
 </header>
 <div class=post-body itemprop=articleBody>
-<p>昨天<a href=https://jasmine617.github.io/post/setup-hugo/>使用Hugo部署的网站框架</a>里部署的还是themes带的样例页面。今天进行个性化定制，包括修改页面上的图片、链接等，并放入自己的博文。</p>
-<p>需要修改的文件主要包括：</p>
-<ul>
-<li>博文内容文件，在“D:\Hugo\myblog”下content文件夹下。</li>
-<li>网站配置文件，在“D:\Hugo\myblog”下config文件夹下。</li>
-<li>发布网站是用到的静态资源（如siderbar使用的头像图片），在主题目录下的静态资源文件夹“D:\Hugo\myblog\themes\hugo-theme-next\static”下。</li>
-<li>如果自己加入的图片和原图的命名不同，就还需要根据实际修改相关的html文件，在主题目录下的布局文件夹“D:\Hugo\myblog\themes\hugo-theme-next\layouts”下。</li>
-</ul>
-<p>本机启动Hugo server，下面的修改基本可以立即生效，方便一边修改一边验证。修改过程记录如下：</p>
+<p>记录在Win 10下安装、配置MySQL 5.7的过程。</p>
+<h2 id=安装步骤>安装步骤</h2>
 <ol>
 <li>
-<p>在“D:\Hugo\myblog\content”下放入自己写的博文。</p>
-<p>注意：中文和英文的文章是分目录存放的。例如，中文博文放在“D:\Hugo\myblog\content\zh-CN\post”下。</p>
-<p>post目录下原有的样例博文，可以直接删除，也可以通过设置draft属性为true来屏蔽。</p>
-<p>博文中用到的图，我暂时放在post目录下了，md文件中的路径写的github上的URL。</p>
+<p>官网下载安装包（https://dev.mysql.com/downloads/mysql/）。
+打开网站，默认显示的是最新的8.0版本；如果要下载5.7版本，需要打开Archives页签，将查询条件设置为5.7.36（目前5.7版本系列中最新的一个版本）。下载不包含测试套件的包即可。</p>
 </li>
 <li>
-<p>逐一打开“D:\Hugo\myblog\config”下的配置文件，根据需要修改。</p>
-<p>我实际只修改了“config.toml”、“languages”、“params.en.toml”和“params.zh-CN.toml”。</p>
-<p>本地调试的时候，可以先改“development”子目录；调试完成需要同步修改“_default”子目录，否则Hugo发布的public站点文件还是错误的。</p>
+<p>将zip包解压到本机某个目录下。
+例如： D:\mysql\mysql-5.7.36-winx64</p>
 </li>
 <li>
-<p>在“D:\Hugo\myblog\themes\hugo-theme-next\static\img”替换自己的图片。</p>
-<p>该目录下是页面上的一些公共图片，例如siderbar的个人信息图片、博文下的QQ二维码、微信收款码等。</p>
-<p>static下还有css、js文件夹，如果不修改页面样式，无需修改。</p>
+<p>在该目录下手工创建my.ini文件，拷贝如下内容，并根据实际安装目录修改两个basedir和datadir。</p>
+<p>basedir配置为mysql安装目录，datadir在安装目录后加data。</p>
+<p>**注意：**此时data文件夹并不存在，在执行后续安装步骤时会由系统自动创建。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=color:#a2f;font-weight:700>[mysqld]</span>
+<span style=color:#080;font-style:italic>#设置3306端口</span>
+<span style=color:#b44>port</span><span style=color:#666>=</span><span style=color:#b44>3306</span>
+<span style=color:#080;font-style:italic>#设置mysql的安装目录</span>
+<span style=color:#b44>basedir</span><span style=color:#666>=</span><span style=color:#b44>D:\mysql\mysql-5.7.36-winx64</span>
+<span style=color:#080;font-style:italic>#设置mysql数据库的数据的存放目录</span>
+<span style=color:#b44>datadir</span><span style=color:#666>=</span><span style=color:#b44>D:\mysql\mysql-5.7.36-winx64\data</span>
+<span style=color:#080;font-style:italic>#允许最大连接数</span>
+<span style=color:#b44>max_connections</span><span style=color:#666>=</span><span style=color:#b44>200</span>
+<span style=color:#080;font-style:italic>#允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统</span>
+<span style=color:#b44>max_connect_errors</span><span style=color:#666>=</span><span style=color:#b44>10</span>
+<span style=color:#080;font-style:italic>#服务端使用的字符集默认为UTF8</span>
+<span style=color:#b44>character-set-server</span><span style=color:#666>=</span><span style=color:#b44>utf8</span>
+<span style=color:#080;font-style:italic>#创建新表时将使用的默认存储引擎</span>
+<span style=color:#b44>default-storage-engine</span><span style=color:#666>=</span><span style=color:#b44>INNODB</span>
+<span style=color:#080;font-style:italic>#默认使用“mysql_native_password”插件认证</span>
+<span style=color:#b44>default_authentication_plugin</span><span style=color:#666>=</span><span style=color:#b44>mysql_native_password</span>
+
+<span style=color:#a2f;font-weight:700>[mysql]</span>
+<span style=color:#080;font-style:italic>#设置mysql客户端默认字符集</span>
+<span style=color:#b44>default-character-set</span><span style=color:#666>=</span><span style=color:#b44>utf8</span>
+<span style=color:#a2f;font-weight:700>[client]</span>
+<span style=color:#080;font-style:italic>#设置mysql客户端连接服务端时默认使用的端口</span>
+<span style=color:#b44>port</span><span style=color:#666>=</span><span style=color:#b44>3306</span>
+<span style=color:#b44>default-character-set</span><span style=color:#666>=</span><span style=color:#b44>utf8</span>
+</code></pre></div></li>
+<li>
+<p>配置环境变量，为系统环境变量path添加一个值：MySQL安装目录下的bin目录。</p>
+<p>例如 D:\mysql\mysql-5.7.36-winx64\bin</p>
 </li>
 <li>
-<p>（可选）根据需要修改“D:\Hugo\myblog\themes\hugo-theme-next\layouts”下的页面组件html文件。</p>
-<p>主要关注“D:\Hugo\myblog\themes\hugo-theme-next\layouts\partials”下的文件，通常有两种情况需要修改：</p>
+<p>以管理员身份打开cmd窗口，执行如下命令初始化数据库：</p>
+<p>**注意：**一定要用管理员身份打开cmd窗口，否则后续的安装步骤可能因为权限问题异常。</p>
+<p>打开windows菜单，“开始 > Windows管理工具 > Windows系统 > 命令提示符”，单击鼠标右键，选择“更多 > 以管理员身份运行”。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>C:<span style=color:#b62;font-weight:700>\W</span>indows<span style=color:#b62;font-weight:700>\s</span>ystem32&gt; mysqld --initialize-insecure --user<span style=color:#666>=</span>mysql
+</code></pre></div><p>初始化完成后，检查MySQL根目录，会发现步骤3指定的data文件夹已创建成功。</p>
+<p>同时，系统会创建root用户（密码为空）。</p>
+</li>
+<li>
+<p>为windows安装mysql服务。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>C:<span style=color:#b62;font-weight:700>\W</span>indows<span style=color:#b62;font-weight:700>\s</span>ystem32&gt;&gt; mysqld -install
+</code></pre></div><p>系统提示“service successfully installed.”则代表配置成功。系统创建的默认服务名为mysql。</p>
+</li>
+<li>
+<p>启动数据库服务</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>C:<span style=color:#b62;font-weight:700>\W</span>indows<span style=color:#b62;font-weight:700>\s</span>ystem32&gt; net start mysql
+</code></pre></div></li>
+<li>
+<p>以root用户登录mysql。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>C:\Windows\system32&gt; mysql -u root -p
+</code></pre></div><p>因为初始化数据库时我们没有设置密码，所以这里系统提示输入密码时，直接回车即可。
+出现 mysql> 提示符，代表登录成功。</p>
+</li>
+<li>
+<p>为root设置密码。</p>
+<p>下面命令中引号内的部分即为要设置的密码，请自行修改。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql>mysql<span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>alter</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>user</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>user</span>()<span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>identified</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>by</span><span style=color:#bbb> </span><span style=color:#b44>&#34;xxxpasswd&#34;</span>;<span style=color:#bbb>
+</span></code></pre></div><p>修改完成，退出登录。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql>mysql<span style=color:#666>&gt;</span><span style=color:#bbb> </span>quit<span style=color:#bbb>
+</span></code></pre></div></li>
+<li>
+<p>使用新设置的密码再次登录mysql，查看系统默认的数据库。</p>
+<p>安装完毕，日常访问数据库时，可以用普通模式打开cmd窗口。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql>C:<span>\</span>Windows<span>\</span>system32<span style=color:#666>&gt;</span><span style=color:#bbb> </span>mysql<span style=color:#bbb> </span><span style=color:#666>-</span>u<span style=color:#bbb> </span>root<span style=color:#bbb> </span><span style=color:#666>-</span>p<span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>mysql<span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>show</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>databases</span>;<span style=color:#bbb>
+</span></code></pre></div></li>
+<li>
+<p>创建自己的数据库</p>
+<p>这里假设要创建的数据库名为“mypython”，请根据自己的需要自行修改。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql>mysql<span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>create</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>database</span><span style=color:#bbb> </span>mypython;<span style=color:#bbb>
+</span></code></pre></div><p>创建完毕，仍然可以用show databases命令检查。</p>
+<p>至此，MySQL的安装和配置完成，后续可以在这个环境基础上创建数据库表，并向表中插入、修改、删除、查询数据。</p>
+</li>
+</ol>
+<h2 id=其他>其他</h2>
+<p>安装过程中如果有异常需要回退，可以使用以下命令和前面的对应。</p>
 <ul>
-<li>替换图片时，如果新文件和旧图片文件的名字不同，则将相关html中的link修改成新文件名。</li>
-<li>修改页面显示内容。例如，我没有支付宝，就屏蔽了“D:\Hugo\myblog\themes\hugo-theme-next\layouts\partials\widgets\reward.html”中的支付宝收款二维码相关代码段。</li>
+<li>
+<p>删除数据库：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql>mysql<span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>drop</span><span style=color:#bbb> </span><span style=color:#a2f;font-weight:700>database</span><span style=color:#bbb> </span>mypython;<span style=color:#bbb>
+</span></code></pre></div></li>
+<li>
+<p>停止数据库服务</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>C:<span style=color:#b62;font-weight:700>\W</span>indows<span style=color:#b62;font-weight:700>\s</span>ystem32&gt; net stop mysql
+</code></pre></div></li>
+<li>
+<p>卸载服务</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>C:<span style=color:#b62;font-weight:700>\W</span>indows<span style=color:#b62;font-weight:700>\s</span>ystem32&gt; mysqld -remove
+</code></pre></div></li>
 </ul>
-</li>
-<li>
-<p>将站点发布到GitHub。</p>
-<ol>
-<li>
-<p>清空public目录，再重新发布生成。</p>
-<p>在站点根目录执行如下cmd命令：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ hugo
-</code></pre></div></li>
-<li>
-<p>进入"D:\Hugo\myblog\public"文件夹，鼠标右键选择“Git Bash Here”，进入Git Bash窗口，执行后续命令。</p>
-</li>
-<li>
-<p>将文件提交到本机git库中。commit备注可以根据实际需要修改。</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git add --all
-$ git commit -m <span style=color:#b44>&#34;commit my own articles&#34;</span>
-</code></pre></div></li>
-<li>
-<p>将站点提交到远程：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ git push -u origin master
-</code></pre></div></li>
-</ol>
-</li>
-</ol>
 </div>
 <footer class=post-footer>
 <div class=post-tags>
-<a href=/tags/github-pages rel=tag title="GitHub Pages">#GitHub Pages#</a>
-<a href=/tags/hugo rel=tag title=Hugo>#Hugo#</a>
+<a href=/tags/mysql rel=tag title=MySQL>#MySQL#</a>
 </div>
 <div class=addthis_inline_share_toolbox></div>
 <div class=post-nav>
@@ -217,10 +265,10 @@ $ git commit -m <span style=color:#b44>&#34;commit my own articles&#34;</span>
 </div>
 <div class=article-copyright-info>
 <p>
-<span>声明：</span>定制个人博客
+<span>声明：</span>Win 10环境下安装MySQL 5.7
 </p>
 <p>
-<span>链接：</span>https://jasmine617.github.io/post/setup-blog/
+<span>链接：</span>https://jasmine617.github.io/post/mysql-install/
 </p>
 <p>
 <span>作者：</span>Jasmine
@@ -246,13 +294,10 @@ $ git commit -m <span style=color:#b44>&#34;commit my own articles&#34;</span>
 </div>
 <div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=https://jasmine617.github.io/post/python-list/ rel=next title=Python中list、tuple、dict和set的对比小结>
-<i class="fa fa-chevron-left"></i> Python中list、tuple、dict和set的对比小结
-</a>
 </div>
 <div class="post-nav-prev post-nav-item">
-<a href=https://jasmine617.github.io/post/setup-hugo/ rel=prev title=使用Hugo创建个人博客框架>
-使用Hugo创建个人博客框架
+<a href=https://jasmine617.github.io/post/mysql-use/ rel=prev title=最常用的MySQL语句>
+最常用的MySQL语句
 <i class="fa fa-chevron-right"></i>
 </a>
 </div>

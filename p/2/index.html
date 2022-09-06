@@ -1,17 +1,18 @@
-<!doctype html><html lang=en dir=content/en>
+<!doctype html><html lang=zh-cn dir=content/zh-cn>
 <head>
+<meta name=generator content="Hugo 0.89.4">
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> Blog - Stay Curious. </title>
-<meta name=keywords content="Blog,Writing">
+<title> 保持好奇心 </title>
+<meta name=keywords content="博客,读书,笔记,技术,分享">
 <meta name=author content="Jasmine">
-<meta property="og:title" content="Blog">
-<meta property="og:site_name" content="Stay Curious.">
+<meta property="og:title" content="Home">
+<meta property="og:site_name" content="保持好奇心">
 <meta property="og:image" content="/img/author.jpg">
-<meta name=title content="Blog - Stay Curious.">
-<meta name=description content="Weclome to Jasmine's blog site.">
+<meta name=title content="Home - 保持好奇心">
+<meta name=description content="欢迎来到Jasmine的小站，这里记录我日常观察、学习到的小知识。">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <link rel=apple-touch-icon href=/img/apple-touch-icon.png>
 <link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
@@ -20,7 +21,7 @@
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 </head>
 <body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
-<div class="container one-collumn sidebar-position-left">
+<div class="container one-collumn sidebar-position-left page-home">
 <div class=headband></div>
 <header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
 <div class=header-inner> <div class=site-brand-container>
@@ -34,16 +35,18 @@
 <div class=site-meta>
 <div class=multi-lang-switch>
 <i class="fa fa-fw fa-language" style=margin-right:5px></i>
-<a class=lang-link id=en href=#>English</a>
+<a class=lang-link id=zh-cn href=#>中文</a>
+<span class=lang-line> / </span>
+<a class=lang-link id=en href=https://jasmine617.github.io/en/>English</a>
 </div>
 <div class=custom-logo-site-title>
-<a href=/en/ class=brand rel=start>
+<a href=/ class=brand rel=start>
 <span class=logo-line-before><i></i></span>
-<span class=site-title>Stay Curious.</span>
+<span class=site-title>保持好奇心</span>
 <span class=logo-line-after><i></i></span>
 </a>
 </div>
-<p class=site-subtitle>Walking slowly under the sky of knowledge</p>
+<p class=site-subtitle>既敏锐又稳定</p>
 </div>
 <div class=site-nav-right>
 <div class="toggle popup-trigger" style=opacity:1;top:0>
@@ -54,27 +57,27 @@
 <nav class=site-nav>
 <ul id=menu class=menu>
 <li class=menu-item>
-<a href=/en/ rel=section>
-<i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home
+<a href=/ rel=section>
+<i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页
 </a>
 </li>
 <li class=menu-item>
-<a href=/en/post rel=section>
-<i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archive
+<a href=/post rel=section>
+<i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档
 </a>
 </li>
 <li class=menu-item>
-<a href=/en/about.html rel=section>
-<i class="menu-item-icon fa fa-fw fa-user"></i> <br>About
+<a href=/about.html rel=section>
+<i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于我
 </a>
 </li>
 <li class=menu-item>
-<a href=/en/404.html rel=section>
-<i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>Page404
+<a href=/404.html rel=section>
+<i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益404
 </a>
 </li>
 <li class="menu-item menu-item-search">
-<a href=javascript:; class=popup-trigger> <i class="menu-item-icon fa fa-search fa-fw"></i> <br> Search</a>
+<a href=javascript:; class=popup-trigger> <i class="menu-item-icon fa fa-search fa-fw"></i> <br> 搜索</a>
 </li>
 </ul>
 <div class=site-search>
@@ -83,7 +86,7 @@
 <span class=search-icon><i class="fa fa-search"></i> </span>
 <span class=popup-btn-close><i class="fa fa-times-circle"></i></span>
 <div class=local-search-input-wrapper>
-<input autocomplete=off placeholder="Enter key words..." spellcheck=false type=text id=local-search-input autocapitalize=none autocorrect=off>
+<input autocomplete=off placeholder=搜索关键字... spellcheck=false type=text id=local-search-input autocapitalize=none autocorrect=off>
 </div>
 </div>
 <div id=local-search-result></div>
@@ -96,32 +99,116 @@
 <div class=main-inner>
 <div class=content-wrap>
 <div id=content class=content>
-<section id=posts class=posts-collapse>
-<div class=collection-title>
-<h2>Blog
-<small>Categories</small>
-</h2>
-</div>
-<div class=collection-title>
-<h2 class="archive-year motion-element" id=archive-year-2021>2021</h2>
-</div>
-<article class="post post-type-normal }}" itemscope itemtype=http://schema.org/Article>
+<section id=posts class=posts-expand>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title>
-<a class=post-title-link href=https://jasmine617.github.io/en/post/setup-helloworld/ itemprop=url>
-<span itemprop=name>Setup the first GitHub Page</span>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://jasmine617.github.io/post/setup-hugo/ itemprop=url>
+使用Hugo创建个人博客框架
 </a>
 </h1>
 <div class=post-meta>
-<time class=post-time itemprop=dateCreated datetime=2021/11/23 content="11/23">
-11/23
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>时间：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-24">
+2021-11-24
 </time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/cs itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>CS</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字数：</span>
+<span class=leancloud-world-count>2407 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>阅读：</span>
+<span class=leancloud-view-count>5分钟</span>
+</span>
 </div>
 </header>
+<div class=post-body itemprop=articleBody>
+<p>昨天跑通了如何<a href=https://jasmine617.github.io/post/setup-helloworld/>使用GitHub Pages建了自己的第一个hello world页面</a>，今天尝试使用Hugo来建一个完整的静态网站框架。</p>
+<p>创建静态网站，用Jekyll、Hexo、Hugo等工具都可以，看了网上大家的分析，最终决定用Hugo来做。</p>
+<p>这里先介绍如何安装Hugo、使用Hugo创建站点，并引入一个主题。按照本文操作完，站点的页面还是themes带的样例页面。我将在下一篇文章中总结如何加入自己的博文，以及修改网站的其他个人信息。</p>
+</div>
+<div class="post-more-link text-center">
+<a class=btn href=https://jasmine617.github.io/post/setup-hugo/ rel=contents>
+阅读全文 &#187;
+</a>
+</div>
+<footer class=post-footer><div class=post-eof></div></footer>
+</article>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://jasmine617.github.io/post/setup-helloworld/ itemprop=url>
+创建第一个GitHub Page
+</a>
+</h1>
+<div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>时间：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2021-11-23">
+2021-11-23
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/cs itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>CS</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字数：</span>
+<span class=leancloud-world-count>1598 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>阅读：</span>
+<span class=leancloud-view-count>4分钟</span>
+</span>
+</div>
+</header>
+<div class=post-body itemprop=articleBody>
+<p>如果想把自己日常的学习心得记录下来，可以创建一个个人博客网站。经过几天的研究比较，发现使用GitHub提供的Pages功能，可以满足基本要求。</p>
+<p>参照网上的多个总结，今天完成了我自己个人博客首页的创建（虽然只是一个hello world）。</p>
+<p>建议先花半天时间，看看<a href=https://www.liaoxuefeng.com/wiki/896043488029600>廖雪峰大神的git总结</a>和<a href=https://pages.github.com/>GitHub Pages官方文档</a>，系统了解一下git、GitHub等的关系，以及GitHub Pages的创建方法，搞清楚背景知识，实际动手会更顺利。</p>
+</div>
+<div class="post-more-link text-center">
+<a class=btn href=https://jasmine617.github.io/post/setup-helloworld/ rel=contents>
+阅读全文 &#187;
+</a>
+</div>
+<footer class=post-footer><div class=post-eof></div></footer>
 </article>
 </section>
 <nav class=pagination>
-<span class="page-number current">1</span>
+<a class="extend prev" rel=prev href=/><i class="fa fa-angle-left"></i></a>
+<a class=page-number href=/>1</a>
+<span class="page-number current">2</span>
 </nav>
 </div>
 </div>
@@ -139,33 +226,33 @@
 <img class=site-author-image itemprop=image src=/img/avatar.png alt=Jasmine>
 <p class=site-author-name itemprop=name>Jasmine</p>
 <p class="site-description motion-element" itemprop=description>
-Keep thirst for knowledge and learning ability!
+保持求知欲、保持学习能力！
 </p>
 </div>
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
-<a href=/en/post/>
-<span class=site-state-item-count>1</span>
-<span class=site-state-item-name>Blogs</span>
+<a href=/post/>
+<span class=site-state-item-count>7</span>
+<span class=site-state-item-name>日志</span>
 </a>
 </div>
 <div class="site-state-item site-state-categories">
-<a href=/en/categories/>
-<span class=site-state-item-count>2</span>
-<span class=site-state-item-name>Categories</span>
+<a href=/categories/>
+<span class=site-state-item-count>1</span>
+<span class=site-state-item-name>分类</span>
 </a>
 </div>
 <div class="site-state-item site-state-tags">
-<a href=/en/tags/>
-<span class=site-state-item-count>1</span>
-<span class=site-state-item-name>Tags</span>
+<a href=/tags/>
+<span class=site-state-item-count>4</span>
+<span class=site-state-item-name>标签</span>
 </a>
 </div>
 </nav>
 <div class="feed-link motion-element">
-<a href=/en/categories/blog/index.xml rel=alternate type=application/rss+xml target=_blank>
+<a href=/index.xml rel=alternate type=application/rss+xml target=_blank>
 <i class="fa fa-rss"></i>
-RSS
+RSS 订阅
 </a>
 </div>
 <div class="links-of-author motion-element">
@@ -185,25 +272,34 @@ CSDN
 <div class="links-of-blogroll motion-element links-of-blogroll-inline">
 <div class=links-of-blogroll-title>
 <i class="fa fa-fw fa-globe"></i>
-Links
+友情链接
 </div>
 <ul class=links-of-blogroll-list>
 <li class=links-of-blogroll-item>
-<a href=https://www.liaoxuefeng.com/ title=LiaoXueFeng target=_blank>LiaoXueFeng</a>
+<a href=https://www.liaoxuefeng.com/ title=廖雪峰 target=_blank>廖雪峰</a>
 </li>
 <li class=links-of-blogroll-item>
-<a href=https://lisenhui.cn/ title=Elkan.Li target=_blank>Elkan.Li</a>
+<a href=https://lisenhui.cn/ title=凡梦星尘 target=_blank>凡梦星尘</a>
 </li>
 </ul>
 </div>
 <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
 <div class=tagcloud-of-blogroll-title>
 <i class="fa fa-fw fa-tags"></i>
-TagCloud
+标签云
 </div>
 <ul class=tagcloud-of-blogroll-list>
 <li class=tagcloud-of-blogroll-item>
-<a href=/en/tags/github-pages>Github pages</a>
+<a href=/tags/github-pages>Github pages</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/hugo>Hugo</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/mysql>Mysql</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/python>Python</a>
 </li>
 </ul>
 </div>
@@ -219,7 +315,7 @@ TagCloud
 &copy; 2010 - 2022
 </span>
 <span class=with-love><i class="fa fa-heart"></i></span>
-<span class=copyright-author>Stay Curious.</span>
+<span class=copyright-author>保持好奇心</span>
 </div>
 </div>
 </footer>

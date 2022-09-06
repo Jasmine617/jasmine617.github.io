@@ -44,7 +44,7 @@
 <span class=logo-line-after><i></i></span>
 </a>
 </div>
-<p class=site-subtitle>在知识的天空下慢慢溜达</p>
+<p class=site-subtitle>既敏锐又稳定</p>
 </div>
 <div class=site-nav-right>
 <div class="toggle popup-trigger" style=opacity:1;top:0>
@@ -128,7 +128,7 @@ Python中print小结
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>3774 字</span>
+<span class=leancloud-world-count>3803 字</span>
 </span>
 <span>
 |
@@ -412,8 +412,8 @@ height <span style=color:#666>=</span> <span style=color:#666>1.5678</span>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>他是小明，今年12岁，身高是1.5678米。
 他是小明，今年12岁，身高是1.5678米。
 他是  小明  ，今年0012岁，身高是1.57米。
-</code></pre></div><h2 id=使用f进行格式化>使用f进行格式化</h2>
-<p>在print中使用f，则在打印输出时，会直接返回{}中定义的表达式结果。相比前面两种格式化方式，这种写法代码最简洁。</p>
+</code></pre></div><h2 id=使用f-string进行格式化>使用f-string进行格式化</h2>
+<p>在print中使用f加字符串的方式，则在打印输出时，会将字符串中{}中的内容替换为对应的变量名的值。相比前面两种格式化方式，这种写法代码最简洁。</p>
 <p>格式为：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#39;xxxx</span><span style=color:#b68;font-weight:700>{</span><span style=color:#666>&lt;</span>参数名<span style=color:#666>&gt;</span><span style=color:#b68;font-weight:700>:</span><span style=color:#b44>&lt;格式控制标记&gt;</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>xxxxx</span><span style=color:#b68;font-weight:700>{</span>参数名<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>xxxxxxxxx</span><span style=color:#b68;font-weight:700>{</span>参数名<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>&#39;</span>)
 </code></pre></div><p>上述示例中：</p>
@@ -423,9 +423,9 @@ height <span style=color:#666>=</span> <span style=color:#666>1.5678</span>
 <li>每对{}内可以定义辅助指令，辅助指令放置在:后，其格式为&lt;填充>&lt;对齐>&lt;宽度>&lt;,>&lt;.精度>&lt;类型>，具体规则和format方法一致。</li>
 </ul>
 <p><strong>样例代码：</strong></p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#080;font-style:italic># 使用f格式化</span>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#080;font-style:italic># 使用f-string格式化</span>
 <span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#39;他是</span><span style=color:#b68;font-weight:700>{</span>name<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>，今年</span><span style=color:#b68;font-weight:700>{</span>age<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>岁，身高是</span><span style=color:#b68;font-weight:700>{</span>height<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>米。&#39;</span>)  <span style=color:#080;font-style:italic>#{}中定义参数名</span>
-<span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#39;他是</span><span style=color:#b68;font-weight:700>{</span>name<span style=color:#b68;font-weight:700>:</span><span style=color:#b44>^6</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>，今年</span><span style=color:#b68;font-weight:700>{</span>age<span style=color:#b68;font-weight:700>:</span><span style=color:#b44>04</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>岁，身高是</span><span style=color:#b68;font-weight:700>{</span>height<span style=color:#b68;font-weight:700>:</span><span style=color:#b44>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>米。&#39;</span>)  
+<span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#39;他是</span><span style=color:#b68;font-weight:700>{</span>name<span style=color:#b68;font-weight:700>:</span><span style=color:#b44>^6</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>，今年</span><span style=color:#b68;font-weight:700>{</span>age<span style=color:#b68;font-weight:700>:</span><span style=color:#b44>04d</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>岁，身高是</span><span style=color:#b68;font-weight:700>{</span>height<span style=color:#b68;font-weight:700>:</span><span style=color:#b44>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#b44>米。&#39;</span>)  
 <span style=color:#a2f>print</span>(<span style=color:#b44>&#39;--------------------------------------&#39;</span>)
 </code></pre></div><p><strong>测试结果：</strong></p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>他是小明，今年12岁，身高是1.5678米。
@@ -474,6 +474,9 @@ height <span style=color:#666>=</span> <span style=color:#666>1.5678</span>
 </div>
 <div class=post-nav>
 <div class="post-nav-next post-nav-item">
+<a href=https://jasmine617.github.io/post/mysql-use/ rel=next title=最常用的MySQL语句>
+<i class="fa fa-chevron-left"></i> 最常用的MySQL语句
+</a>
 </div>
 <div class="post-nav-prev post-nav-item">
 <a href=https://jasmine617.github.io/post/python-list/ rel=prev title=Python中list、tuple、dict和set的对比小结>
@@ -508,7 +511,7 @@ Python中list、tuple、dict和set的对比小结
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>5</span>
+<span class=site-state-item-count>7</span>
 <span class=site-state-item-name>日志</span>
 </a>
 </div>
@@ -520,7 +523,7 @@ Python中list、tuple、dict和set的对比小结
 </div>
 <div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>3</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>标签</span>
 </a>
 </div>
@@ -566,6 +569,9 @@ CSDN
 <a href=/tags/hugo>Hugo</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
+<a href=/tags/mysql>Mysql</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
 <a href=/tags/python>Python</a>
 </li>
 </ul>
@@ -579,7 +585,7 @@ CSDN
 <div class=footer-inner>
 <div class=copyright>
 <span class=copyright-year>
-&copy; 2010 - 2021
+&copy; 2010 - 2022
 </span>
 <span class=with-love><i class="fa fa-heart"></i></span>
 <span class=copyright-author>保持好奇心</span>

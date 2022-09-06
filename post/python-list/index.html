@@ -44,7 +44,7 @@
 <span class=logo-line-after><i></i></span>
 </a>
 </div>
-<p class=site-subtitle>在知识的天空下慢慢溜达</p>
+<p class=site-subtitle>既敏锐又稳定</p>
 </div>
 <div class=site-nav-right>
 <div class="toggle popup-trigger" style=opacity:1;top:0>
@@ -128,13 +128,13 @@ Python中list、tuple、dict和set的对比小结
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>4451 字</span>
+<span class=leancloud-world-count>4594 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>9分钟</span>
+<span class=leancloud-view-count>10分钟</span>
 </span>
 <span id=/post/python-list/ class=leancloud_visitors data-flag-title=Python中list、tuple、dict和set的对比小结>
 |
@@ -277,6 +277,16 @@ list_t6 <span style=color:#666>=</span> <span style=color:#a2f>list</span>(range
 <span style=color:#a2f>print</span>(<span style=color:#b44>&#39;list_t6:&#39;</span>, list_t6)
 <span style=color:#080;font-style:italic>#创建空列表</span>
 <span style=color:#a2f>print</span>(<span style=color:#a2f>list</span>())
+
+<span style=color:#080;font-style:italic># 使用列表表达式创建列表</span>
+list_t7 <span style=color:#666>=</span> [x <span style=color:#666>*</span> x <span style=color:#a2f;font-weight:700>for</span> x <span style=color:#a2f;font-weight:700>in</span> <span style=color:#a2f>range</span>(<span style=color:#666>1</span>, <span style=color:#666>11</span>)]
+<span style=color:#a2f>print</span>(<span style=color:#b44>&#39;List Comprehensions, list_t7:&#39;</span>, list_t7)
+list_t8 <span style=color:#666>=</span> [x <span style=color:#666>*</span> x <span style=color:#a2f;font-weight:700>for</span> x <span style=color:#a2f;font-weight:700>in</span> <span style=color:#a2f>range</span>(<span style=color:#666>1</span>, <span style=color:#666>11</span>) <span style=color:#a2f;font-weight:700>if</span> x <span style=color:#666>%</span> <span style=color:#666>2</span> <span style=color:#666>==</span> <span style=color:#666>0</span>]
+<span style=color:#a2f>print</span>(<span style=color:#b44>&#39;List Comprehensions use if, list_t8:&#39;</span>, list_t8)
+list_t9 <span style=color:#666>=</span> [m <span style=color:#666>+</span> n <span style=color:#a2f;font-weight:700>for</span> m <span style=color:#a2f;font-weight:700>in</span> <span style=color:#b44>&#39;ABC&#39;</span> <span style=color:#a2f;font-weight:700>for</span> n <span style=color:#a2f;font-weight:700>in</span> <span style=color:#b44>&#39;XYZ&#39;</span>]
+<span style=color:#a2f>print</span>(<span style=color:#b44>&#39;List Comprehensions use double cycle, list_t9:&#39;</span>, list_t9)
+list_t10 <span style=color:#666>=</span> [x <span style=color:#a2f;font-weight:700>if</span> x <span style=color:#666>%</span> <span style=color:#666>2</span> <span style=color:#666>==</span> <span style=color:#666>0</span> <span style=color:#a2f;font-weight:700>else</span> <span style=color:#666>-</span>x <span style=color:#a2f;font-weight:700>for</span> x <span style=color:#a2f;font-weight:700>in</span> <span style=color:#a2f>range</span>(<span style=color:#666>1</span>, <span style=color:#666>11</span>)]
+<span style=color:#a2f>print</span>(<span style=color:#b44>&#39;List Comprehensions use else, list_t10:&#39;</span>, list_t10)
 <span style=color:#a2f>print</span>(<span style=color:#b44>&#39;--------------------------------------&#39;</span>)
 
 <span style=color:#080;font-style:italic># 获取list长度</span>
@@ -369,6 +379,10 @@ list_t4: [&#39;Python&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;JavaScript&#39;]
 list_t5: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 list_t6: [1, 2, 3, 4, 5]
 []
+List Comprehensions, list_t7: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+List Comprehensions use if, list_t8: [4, 16, 36, 64, 100]
+List Comprehensions use double cycle, list_t9: [&#39;AX&#39;, &#39;AY&#39;, &#39;AZ&#39;, &#39;BX&#39;, &#39;BY&#39;, &#39;BZ&#39;, &#39;CX&#39;, &#39;CY&#39;, &#39;CZ&#39;]
+List Comprehensions use else, list_t10: [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]
 --------------------------------------
 length of list_t1: 5
 --------------------------------------
@@ -871,7 +885,7 @@ symmetric difference of set1 and set8: {2, 3, &#39;Shanghai&#39;, &#39;Shenzhen&
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>5</span>
+<span class=site-state-item-count>7</span>
 <span class=site-state-item-name>日志</span>
 </a>
 </div>
@@ -883,7 +897,7 @@ symmetric difference of set1 and set8: {2, 3, &#39;Shanghai&#39;, &#39;Shenzhen&
 </div>
 <div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>3</span>
+<span class=site-state-item-count>4</span>
 <span class=site-state-item-name>标签</span>
 </a>
 </div>
@@ -929,6 +943,9 @@ CSDN
 <a href=/tags/hugo>Hugo</a>
 </li>
 <li class=tagcloud-of-blogroll-item>
+<a href=/tags/mysql>Mysql</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
 <a href=/tags/python>Python</a>
 </li>
 </ul>
@@ -942,7 +959,7 @@ CSDN
 <div class=footer-inner>
 <div class=copyright>
 <span class=copyright-year>
-&copy; 2010 - 2021
+&copy; 2010 - 2022
 </span>
 <span class=with-love><i class="fa fa-heart"></i></span>
 <span class=copyright-author>保持好奇心</span>
